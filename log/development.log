@@ -3525,3 +3525,2661 @@ Rendering rescues/layout (not_found)
   [4;36;1mroles_users Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
   [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 4 ) [0m
   [4;36;1mRole Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+/!\ FAILSAFE /!\  Wed Jun 10 18:21:51 +0530 2009
+  Status: 500 Internal Server Error
+  Can't connect to MySQL server on 'localhost' (10061)
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `real_connect'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:576:in `connect'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:204:in `initialize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `new'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/mysql_adapter.rb:76:in `mysql_connection'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (63.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 18:22:03) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (16.0ms)
+Rendered common/_head (15.0ms)
+Rendered common/_top (2547.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 2985ms (View: 2969, DB: 63) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:22:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:22:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:22:22) [GET]
+
+ActionController::RoutingError (No route matches "/accout_types" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:22:35) [GET]
+
+ActionController::RoutingError (No route matches "/accout_type" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:22:49) [GET]
+
+ActionController::RoutingError (No route matches "/acc" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:25:20) [GET]
+
+ActionController::RoutingError (No route matches "/accout_types" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:25:24) [GET]
+
+ActionController::RoutingError (No route matches "/accout_type" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:25:26) [GET]
+
+ActionController::RoutingError (No route matches "/accout_type" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:25:27) [GET]
+
+ActionController::RoutingError (No route matches "/accout_type" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:25:32) [GET]
+
+ActionController::RoutingError (No route matches "/accout_types" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:25:43) [GET]
+
+ActionController::RoutingError (No route matches "/accout_types" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:25:48) [GET]
+
+ActionController::RoutingError (No route matches "/accout_type" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:28:05) [GET]
+
+ActionController::RoutingError (No route matches "/accout_type" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:28:40) [GET]
+
+ActionController::RoutingError (No route matches "/accout_type" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:28:45) [GET]
+
+ActionController::RoutingError (No route matches "/accout_types" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:31:13) [GET]
+
+ActionController::RoutingError (No route matches "/accout_types" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:31:18) [GET]
+
+ActionController::RoutingError (No route matches "/accout_type" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:31:25) [GET]
+
+ActionController::RoutingError (No route matches "/acconut_type" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:31:35) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (16.0ms)
+Completed in 391ms (View: 375, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:38:31) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:38:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:38:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:40:49) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (16.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 125ms (View: 125, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:40:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:40:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:41:07) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (16.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 156ms (View: 141, DB: 16) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:41:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:41:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:41:25) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:41:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:41:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:42:43) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 62ms (View: 46, DB: 16) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:42:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:42:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:51:12) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 78ms (View: 62, DB: 15) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:51:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:51:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:51:48) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:51:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:51:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:52:05) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 32, DB: 16) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:52:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:52:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:52:17) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (15.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:52:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:52:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:53:18) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 171ms (View: 110, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:53:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:53:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:54:01) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 63ms (View: 47, DB: 15) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:54:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:54:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:54:13) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (16.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 47, DB: 16) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:54:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:54:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:55:39) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:55:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:55:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:56:24) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (16.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:56:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:56:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:56:30) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:56:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:56:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 18:56:40) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (16.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 218ms (View: 203, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:56:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:56:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:56:47) [GET]
+
+ActionController::RoutingError (No route matches "/accout_types" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:56:55) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:56:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:56:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 18:57:10) [POST]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (235.0ms)
+Rendered rescues/_request_and_response (47.0ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 18:58:04) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (16.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:58:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:58:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 18:58:09) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+  [4;36;1mUser Columns (219.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (16.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 313ms (View: 78, DB: 219) | 200 OK [http://localhost/users/new?accounttype=expert&B1=Next+Step]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:58:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:58:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 18:58:58) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 281ms (View: 250, DB: 15) | 200 OK [http://localhost/users/new?accounttype=expert&B1=Next+Step]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:59:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:59:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 18:59:50) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 125ms (View: 78, DB: 32) | 200 OK [http://localhost/users/new?accounttype=expert&B1=Next+Step]
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:59:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 18:59:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:07:14) [GET]
+
+SyntaxError (D:/InstantRails-2.0-win/rails_apps/xpertin/app/controllers/account_type_controller.rb:18: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (468.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:07:34) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (15.0ms)
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:07:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:07:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#new (for 127.0.0.1 at 2009-06-10 19:07:41) [POST]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (438.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:09:55) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:09:57) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 16ms (View: 16, DB: 15) | 200 OK [http://localhost/account_type]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:09:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:09:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:10:01) [POST]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:10:55) [POST]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:11:01) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:11:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:11:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:11:06) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 16ms (View: 0, DB: 15) | 200 OK [http://localhost/account_type?accounttype=expert&B1=Next+Step]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:11:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:11:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:12:25) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/account_type?accounttype=expert&B1=Next+Step]
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:12:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:12:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#new (for 127.0.0.1 at 2009-06-10 19:12:30) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+Redirected to http://localhost:3000/users/new
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/account_type/new?accounttype=expert&B1=Next+Step]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:12:30) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:12:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:12:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:14:51) [GET]
+  Parameters: {"id"=>"expert"}
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 62ms (View: 47, DB: 15) | 200 OK [http://localhost/users/new/expert]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:14:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:14:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:16:16) [GET]
+  Parameters: {"id"=>"expert"}
+  [4;35;1mUser Columns (188.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (16.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 328ms (View: 125, DB: 188) | 200 OK [http://localhost/users/new/expert]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:16:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:16:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:22:22) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:22:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:22:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#new (for 127.0.0.1 at 2009-06-10 19:22:27) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+Redirected to http://localhost:3000/users/new
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/account_type/new?accounttype=expert&B1=Next+Step]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:22:27) [GET]
+  [4;36;1mUser Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 125ms (View: 93, DB: 48) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:22:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:22:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#new (for 127.0.0.1 at 2009-06-10 19:23:55) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+Redirected to http://localhost:3000/users/new
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/account_type/new?accounttype=expert&B1=Next+Step]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:23:55) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 94ms (View: 63, DB: 16) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:23:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:23:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#new (for 127.0.0.1 at 2009-06-10 19:24:52) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+Redirected to http://localhost:3000/users/new
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/account_type/new?accounttype=expert&B1=Next+Step]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:24:52) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:24:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:24:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:25:47) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 140ms (View: 125, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:25:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:25:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#new (for 127.0.0.1 at 2009-06-10 19:25:52) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+Redirected to http://localhost:3000/users/new
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/account_type/new?accounttype=expert&B1=Next+Step]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:25:53) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 32, DB: 16) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:25:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:25:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:26:23) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:26:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:26:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#new (for 127.0.0.1 at 2009-06-10 19:26:28) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+Redirected to http://localhost:3000/users/new/expert
+Completed in 16ms (DB: 16) | 302 Found [http://localhost/account_type/new?accounttype=expert&B1=Next+Step]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:26:28) [GET]
+  Parameters: {"id"=>"expert"}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 62ms (View: 46, DB: 16) | 200 OK [http://localhost/users/new/expert]
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:26:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:26:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:28:55) [GET]
+  Parameters: {"id"=>"expert"}
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (16.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 234ms (View: 219, DB: 15) | 200 OK [http://localhost/users/new/expert]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:28:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:28:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:29:39) [GET]
+  Parameters: {"id"=>"expert"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/users/new/expert]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:29:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:29:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:30:02) [GET]
+  Parameters: {"id"=>"expert"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/users/new/expert]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:30:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:30:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:30:13) [GET]
+  Parameters: {"id"=>"expert"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (15.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/users/new/expert]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:30:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:30:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 19:31:10) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry3", "password"=>"trytry3", "login"=>"tony", "email"=>"tony@gmail.com"}, "commit"=>"Create your account", "authenticity_token"=>"13a70DpbrSg0oXt5BdY97FZn0FRRz3JOeTRYTwaRx6U=", "role"=>"expert", "agree"=>"agree"}
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'expert') [0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'tony') LIMIT 1[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'tony@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (31.0ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `updated_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '44f0091f552e6672b4b0ba6c30944f1af76f1396', '2009-06-10 14:01:10', NULL, '438fae3a6161857f6ad8026fdaaca2e992edfcee', NULL, '006df5eb6e308d45e4f0ce77f521ef78f77a7376', NULL, 'tony', 'tony@gmail.com', '2009-06-10 14:01:10')[0m
+  [4;36;1mroles_users Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (2, 5)[0m
+Sent mail to tony@gmail.com
+
+Date: Wed, 10 Jun 2009 19:31:10 +0530
+From: ADMINEMAIL
+To: tony@gmail.com
+Subject: xpert-in.com Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: tony
+  Password: trytry3
+
+Visit this url to activate your account:
+
+  http://localhost:3000/activate/006df5eb6e308d45e4f0ce77f521ef78f77a7376
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 4172ms (DB: 94) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 19:31:14) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 32ms (View: 16, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:31:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:31:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:36:30) [GET]
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 94ms (View: 63, DB: 31) | 200 OK [http://localhost/signup]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:36:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:36:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:36:43) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:36:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:36:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#new (for 127.0.0.1 at 2009-06-10 19:36:47) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+Redirected to http://localhost:3000/users/new/expert
+Completed in 0ms (DB: 16) | 302 Found [http://localhost/account_type/new?accounttype=expert&B1=Next+Step]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 19:36:48) [GET]
+  Parameters: {"id"=>"expert"}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/users/new/expert]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:36:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:36:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:39:37) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:39:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:39:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:40:02) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (16.0ms)
+Completed in 31ms (View: 31, DB: 15) | 200 OK [http://localhost/account_type]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:40:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:40:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:40:35) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 47, DB: 16) | 200 OK [http://localhost/account_type]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:40:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:40:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 19:41:01) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:41:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:41:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:46:18) [GET]
+
+ActionController::RoutingError (No route matches "/account_verify" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-10 19:47:40) [GET]
+
+NameError (uninitialized constant AccountVerifiesController):
+  
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountVerifyController#index (for 127.0.0.1 at 2009-06-10 19:47:55) [GET]
+Rendering template within layouts/application
+Rendering account_verify/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/account_verify/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:47:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:47:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountVerifyController#index (for 127.0.0.1 at 2009-06-10 19:50:29) [GET]
+Rendering template within layouts/application
+Rendering account_verify/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/account_verify]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:50:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:50:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-06-10 19:53:07) [GET]
+  Parameters: {"activation_code"=>"006df5eb6e308d45e4f0ce77f521ef78f77a7376"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`activation_code` = '006df5eb6e308d45e4f0ce77f521ef78f77a7376') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (16.0ms)[0m   [0;1mUPDATE `users` SET `activated_at` = '2009-06-10 14:23:07', `activation_code` = NULL, `updated_at` = '2009-06-10 14:23:07' WHERE `id` = 5[0m
+Sent mail to tony@gmail.com
+
+Date: Wed, 10 Jun 2009 19:53:08 +0530
+From: ADMINEMAIL
+To: tony@gmail.com
+Subject: xpert-in.com Your account has been activated!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+tony, your account has been activated.  Welcome aboard!
+
+  http://localhost:3000/
+  [4;35;1mSQL (15.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/login
+Completed in 18578ms (DB: 31) | 302 Found [http://localhost/activate/006df5eb6e308d45e4f0ce77f521ef78f77a7376]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-10 19:53:26) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 140ms (View: 110, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:53:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:53:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-06-10 19:55:05) [GET]
+  Parameters: {"activation_code"=>"006df5eb6e308d45e4f0ce77f521ef78f77a7376"}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = '006df5eb6e308d45e4f0ce77f521ef78f77a7376') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 32ms (DB: 32) | 302 Found [http://localhost/activate/006df5eb6e308d45e4f0ce77f521ef78f77a7376]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 19:55:06) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:55:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 19:55:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 20:04:29) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/account_type]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:04:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:04:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#new (for 127.0.0.1 at 2009-06-10 20:04:34) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+Redirected to http://localhost:3000/users/new/expert
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/account_type/new?accounttype=expert&B1=Next+Step]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 20:04:35) [GET]
+  Parameters: {"id"=>"expert"}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 63ms (View: 32, DB: 16) | 200 OK [http://localhost/users/new/expert]
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:04:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:04:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 20:04:58) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry3", "password"=>"trytry3", "login"=>"tonyja", "email"=>"tonyja@gmail.com"}, "commit"=>"Create your account", "authenticity_token"=>"13a70DpbrSg0oXt5BdY97FZn0FRRz3JOeTRYTwaRx6U=", "role"=>"expert", "agree"=>"agree"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'expert') [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'tonyja') LIMIT 1[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'tonyja@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `updated_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '236b56bd863146c05f012e080a32d2cd44c0feca', '2009-06-10 14:34:58', NULL, '1b4bcd34cc12a73773afd5f368fc54907d47dfc4', NULL, '1ae92e1fbcd8bccbdaffbbe70eca0af9e6fa7e9f', NULL, 'tonyja', 'tonyja@gmail.com', '2009-06-10 14:34:58')[0m
+  [4;36;1mroles_users Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (2, 6)[0m
+Sent mail to tonyja@gmail.com
+
+Date: Wed, 10 Jun 2009 20:04:58 +0530
+From: ADMINEMAIL
+To: tonyja@gmail.com
+Subject: xpert-in.com Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: tonyja
+  Password: trytry3
+
+Visit this url to activate your account:
+
+  http://localhost:3000/activate/1ae92e1fbcd8bccbdaffbbe70eca0af9e6fa7e9f
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 2688ms (DB: 47) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 20:05:01) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 31, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:05:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:05:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#index (for 127.0.0.1 at 2009-06-10 20:05:39) [GET]
+Rendering template within layouts/application
+Rendering account_type/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 15ms (View: 15, DB: 16) | 200 OK [http://localhost/account_type]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:05:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:05:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountTypeController#new (for 127.0.0.1 at 2009-06-10 20:05:43) [GET]
+  Parameters: {"B1"=>"Next Step", "accounttype"=>"expert"}
+Redirected to http://localhost:3000/users/new/expert
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/account_type/new?accounttype=expert&B1=Next+Step]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 20:05:44) [GET]
+  Parameters: {"id"=>"expert"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/users/new/expert]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:05:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:05:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 20:06:07) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry3", "password"=>"trytry3", "login"=>"amit", "email"=>"amit@yahoo.com"}, "commit"=>"Create your account", "authenticity_token"=>"13a70DpbrSg0oXt5BdY97FZn0FRRz3JOeTRYTwaRx6U=", "role"=>"expert", "agree"=>"agree"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'expert') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'amit') LIMIT 1[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'amit@yahoo.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `updated_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '7ad5154c70818d56ae4ba8be1816bcd01524e807', '2009-06-10 14:36:07', NULL, '76bb75a6c3a74c08d58c50b91ad0d7a7903ef345', NULL, '554587dd8597c2e36846202d58d0e082b48fdaae', NULL, 'amit', 'amit@yahoo.com', '2009-06-10 14:36:07')[0m
+  [4;35;1mroles_users Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (2, 7)[0m
+Sent mail to amit@yahoo.com
+
+Date: Wed, 10 Jun 2009 20:06:07 +0530
+From: ADMINEMAIL
+To: amit@yahoo.com
+Subject: xpert-in.com Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: amit
+  Password: trytry3
+
+Visit this url to activate your account:
+
+  http://localhost:3000/activate/554587dd8597c2e36846202d58d0e082b48fdaae
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account_verify
+Completed in 1625ms (DB: 47) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountVerifyController#index (for 127.0.0.1 at 2009-06-10 20:06:09) [GET]
+Rendering template within layouts/application
+Rendering account_verify/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/account_verify]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:06:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:06:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-06-10 20:08:01) [GET]
+  Parameters: {"activation_code"=>"554587dd8597c2e36846202d58d0e082b48fdaae"}
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = '554587dd8597c2e36846202d58d0e082b48fdaae') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `activated_at` = '2009-06-10 14:38:01', `activation_code` = NULL, `updated_at` = '2009-06-10 14:38:01' WHERE `id` = 7[0m
+Rendered common/_front_end_tabs (0.0ms)
+Sent mail to amit@yahoo.com
+
+Date: Wed, 10 Jun 2009 20:08:01 +0530
+From: ADMINEMAIL
+To: amit@yahoo.com
+Subject: xpert-in.com Your account has been activated!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+
+
+
+<div id="nav">
+	<ul class="clearfix">
+		<li class="selected"><a href="/">Overview</a></li>
+		<li><a href="#">Why to use Xpert-in?</a></li>
+		<li><a href="/providers">Providers</a></li>
+		<li><a href="/jobs">Jobs</a></li>
+	</ul>
+</div>
+
+  <div class="main-content  distance-bottom-more">
+    <div class="inner-panel_lg_holder">
+      <h2>Step 3 : Email Verified</h2>
+      <div class="inner-panel_lg">
+        <div id="tabx" class="clearfix">
+          <div class="form00 fix-ie-preface">
+		    <h1>Your Email is Verified</h1>
+            
+			<center><h1>
+			amit, your account has been activated.  Welcome aboard!
+			http://localhost:3000/</h1></center>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+          </div>
+	       <!-- 
+	       <div class="just-panel">
+           <div class="form00 fix-ie-preface">
+              <h1>Choose Your Account Type</h1>
+		   </div>
+		   </div>
+		   -->
+        </div>
+      </div>
+    </div>
+    
+
+		<div class="clear c0">&nbsp;</div>
+   </div>
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+
+ActionView::MissingTemplate (Missing template users/activate.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-06-10 20:10:55) [GET]
+  Parameters: {"activation_code"=>"554587dd8597c2e36846202d58d0e082b48fdaae"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`activation_code` = '554587dd8597c2e36846202d58d0e082b48fdaae') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/activate/554587dd8597c2e36846202d58d0e082b48fdaae]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 20:10:56) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:10:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:10:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-06-10 20:11:27) [GET]
+  Parameters: {"activation_code"=>"1ae92e1fbcd8bccbdaffbbe70eca0af9e6fa7e9f"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`activation_code` = '1ae92e1fbcd8bccbdaffbbe70eca0af9e6fa7e9f') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `activated_at` = '2009-06-10 14:41:27', `activation_code` = NULL, `updated_at` = '2009-06-10 14:41:27' WHERE `id` = 6[0m
+Sent mail to tonyja@gmail.com
+
+Date: Wed, 10 Jun 2009 20:11:27 +0530
+From: ADMINEMAIL
+To: tonyja@gmail.com
+Subject: xpert-in.com Your account has been activated!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+tonyja, your account has been activated.  Welcome aboard!
+
+  http://localhost:3000/
+  [4;35;1mSQL (15.0ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/activate
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 1594ms (View: 78, DB: 15) | 200 OK [http://localhost/activate/1ae92e1fbcd8bccbdaffbbe70eca0af9e6fa7e9f]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:11:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 20:11:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

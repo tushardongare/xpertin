@@ -24,6 +24,10 @@ ActionController::Routing::Routes.draw do |map|
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
 
   map.root :controller => "overviews"
+  
+  map.account_type '/account_type', :controller => 'account_type', :action => 'index'
+  map.account_verify '/account_verify', :controller => 'account_verify', :action => 'index'
+  #map.resource :account_verify
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
