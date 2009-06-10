@@ -1,0 +1,63 @@
+/****Tabs****/
+.ui-tabs {zoom:1;}
+.ui-tabs .ui-tabs-nav {position:relative;}
+.ui-tabs .ui-tabs-nav li {position:relative;float:left;border-bottom-width:0 !important;font-family:arial, helvetica, sans-serif;font-size:0.95em;text-transform:uppercase;list-style:none;margin:0;line-height:normal;}
+.ui-tabs .ui-tabs-nav li a {float:left;width:150px;/*height:42px;*/text-decoration:none;padding:20px 0 4px;text-align:center;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {padding-bottom:1px;border-bottom-width:0;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {padding:15px 0 9px;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {cursor:move;}
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {cursor:pointer;} /*first selector in group seems obsolete, but required to overcome bug in Opera applying cursor:text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel {display:block;float:left;width:956px;padding:12px;background:url(../images/tabs-panel_bg.gif) no-repeat;margin-top:-1px;}
+.ui-tabs .ui-tabs-hide {display:none !important;}
+
+/****Component containers****/
+.ui-widget {}
+/*.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {font-size:1em;}*/
+.ui-widget-content {}
+.ui-widget-content a {}
+.ui-widget-header {color:#222/*{fcHeader}*/;}
+.ui-widget-header a {}
+
+/****Interaction states****/
+.ui-state-default, .ui-widget-content .ui-state-default {background:/*#8158a4 */url(../images/ui-tab-off.gif) bottom no-repeat;color:#bea2d7;}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {color:#bea2d7;text-decoration:none;}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {color:#fff;}
+.ui-state-hover a, .ui-state-hover a:hover {color:#fff;text-decoration:none;}
+.ui-state-active, .ui-widget-content .ui-state-active {background:/*#8f66b2 */url(../images/ui-tab-on.gif) bottom no-repeat;color:#fff;}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {color:#fff;text-decoration:none;}
+
+/****corner radiuses****/
+/*.ui-corner-tl {-moz-border-radius-topleft:4px;-webkit-border-top-left-radius:4px;}
+.ui-corner-tr {-moz-border-radius-topright:4px;-webkit-border-top-right-radius:4px;}
+.ui-corner-bl {-moz-border-radius-bottomleft:4px;-webkit-border-bottom-left-radius:4px;}
+.ui-corner-br {-moz-border-radius-bottomright:4px;-webkit-border-bottom-right-radius:4px;}
+.ui-corner-top {-moz-border-radius-topleft:4px;-webkit-border-top-left-radius:4px;-moz-border-radius-topright:4px;-webkit-border-top-right-radius:4px;}
+.ui-corner-bottom {-moz-border-radius-bottomleft:4px;-webkit-border-bottom-left-radius:4px;-moz-border-radius-bottomright:4px;-webkit-border-bottom-right-radius:4px;}
+.ui-corner-right { -moz-border-radius-topright:4px;-webkit-border-top-right-radius:4px;-moz-border-radius-bottomright:4px;-webkit-border-bottom-right-radius:4px;}
+.ui-corner-left {-moz-border-radius-topleft:4px;-webkit-border-top-left-radius:4px;-moz-border-radius-bottomleft:4px;-webkit-border-bottom-left-radius:4px;}
+.ui-corner-all {-moz-border-radius:4px;-webkit-border-radius:4px;}*/
+
+/* with multiple calendars
+.ui-datepicker.ui-datepicker-multi { width:auto; }
+.ui-datepicker-multi .ui-datepicker-group { float:left; }
+.ui-datepicker-multi .ui-datepicker-group table { width:95%; margin:0 auto .4em; }
+.ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
+.ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
+.ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; }
+.ui-datepicker-row-break { clear:both; width:100%; } */
+
+/* RTL support 
+.ui-datepicker-rtl { direction: rtl; }
+.ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }*/

@@ -1,0 +1,76 @@
+
+<%= render :partial => 'common/front_end_tabs' %>
+
+  <div class="main-content">
+    <div id="trail">
+      <a href="/">Home</a> &#187; Create an account
+	</div>
+
+    <div class="inner-panel_lg_holder">
+      <h2>Create an account</h2>
+      <div class="inner-panel_lg">
+       <div id="tabx" class="clearfix">
+         <div class="form00 fix-ie-preface">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio.
+          Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat.
+          Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          Donec vulputate faucibus risus ut sollicitudin.</p>
+		 </div>
+         <%= error_messages_for :user %>
+		 <% form_for :user, :url => users_path do |f| -%>
+		  <h4>
+             <input type="radio" id="form00-001" name="role" value="provider"/> I want create to a provider's account &nbsp;&nbsp;
+             <input type="radio" id="form00-002" name="role" value="client"/> I want create to a client's account
+          </h4>
+         <div class="just-panel add_width_for_single_panel">
+         <!-- <form method="post"> -->
+
+          <div class="form00 clearfix">
+            <table cellpadding="0" cellspacing="0">
+              <!--<tr>
+                <td><label for="form00-01">Your name<span class="color-red">*</span> </label></td>
+                <td><input type="text" id="form00-01" value="" /></td>
+              </tr> -->
+              <tr>
+                <td><label for="form00-02">Username<span class="color-red">*</span> </label></td>
+                <td><%= f.text_field :login , :id => "form00-01" %></td>
+              </tr>
+			  <tr>
+                <td><label for="form00-02">Email<span class="color-red">*</span> </label></td>
+                <td><%= f.text_field :email %></td>
+              </tr>
+
+              <tr>
+                <td><label for="form00-02">Password<span class="color-red">*</span> </label></td>
+                <td><%= f.password_field :password %></td>
+              </tr>
+              <tr>
+                <td><label for="form00-02">Confirm Password<span class="color-red">*</span> </label></td>
+                <td><%= f.password_field :password_confirmation %></td>
+              </tr>
+              <tr>
+                <!-- <td>&nbsp;</td> -->
+                <td colspan="2"><input name="agree" value="agree" class="form-checkbox" type="checkbox"  id="form00-06"> <i>I agree with <strong>Term & conditions</strong> and the <strong>Privacy Policy</strong></i></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td><%= submit_tag 'Create your account', :class=>"medium-button submit" %> <a href="/"> Cancel </a></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>Already have an account : <a href="/signin">sign in</a></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td><span class="color-red">*</span> mandatory fields</td>
+              </tr>
+            </table>
+          </div>
+          <% end -%>
+        </div>
+
+      </div>
+    </div>
+   </div>
+	<div class="clear c0">&nbsp;</div>
+  </div>

@@ -1,0 +1,103 @@
+/**********************************
+Description...:CSS condition file for IE6-
+Copyright.....:Persona Ltd.
+Author........:lewis@per-so-na.com
+Last Changed..:24-03-2009
+Notes #1......:Fixes for IE6 quirks
+/******************/
+body {behavior:url("./stylesheets/csshover.htc");}
+/*div {display:inline;}*/
+.clearfix {display:inline-block;}
+.line {margin:0 0 15px;}
+
+#tabs {min-height:556px;height:auto !important;height:556px;}
+
+#taby_s1, #taby_s3, #taby_s2 {width:309px;margin-left:0;background:none;}
+#taby_h1, #taby_h2 {width:469px;margin-left:0;background:none;}
+#taby_h1, #taby_h2, #taby_h3, #taby_h4, .com-start {padding-bottom:8px;}
+
+#taby_s2 dl {float:left;}
+#taby_s2 dl dt {background:url(../images/icon-mail01.gif) 0 15px no-repeat;}
+
+.inner-panel_sm .ui-widget-header, .inner-panel_hf .ui-widget-header {margin-left:1px;}
+.inner-panel_lg_holder a.toggle, .inner-panel_md_holder a.toggle, .inner-panel_hf_holder a.toggle, .inner-panel_sm_holder a.toggle {right:10px;}
+
+.proj-view h3 a:link, .proj-view h3 a:visited {color:#013d65;}
+
+.notepad input.check {vertical-align:middle;}
+#text-pane {clear:none;}
+
+#progress input {font-size:1em;}
+.ui-progressbar .ui-progressbar-value {background:none url(../images/ie-progress01.gif) repeat-x;}
+.ui-slider-horizontal .ui-slider-range-min {background:none url(../images/ie-progress02.gif) repeat-x;}
+.ui-slider-horizontal .ui-slider-handle {background:url(../images/ie-icon-slider.gif) no-repeat;}
+
+.form00 input.checker, .form00 input.radio {margin-bottom:-2px;background:none;}
+
+.com-item .com-col {min-height:150px;height:auto !important;height:150px;}
+
+.email-pane .form00 {min-width:400px;width:auto !important;width:400px;}
+
+.toggle_container, .toggle_container0 {float:none;}
+.toggle_container ol li a:link, .toggle_container ol li a:visited {color:#fff;}
+
+.form00 {min-width:424px;width:auto !important;width:424px;}
+.form00, .table-sort, .com-col, #webcam, #email-app, .email-pane {display:inline;}
+
+#form03-03_holder, #form03-05_holder, #form05-01a_holder, #form05-02_holder, #form05-04a_holder, #form05-04b_holder, #form05-05a_holder, #form05-05b_holder, 
+#form05-06a_holder, #form05-06b_holder, #form05-07a_holder, #form05-07b_holder, #form05-04_holder, #form06-02_holder, #form06-04a_holder, #form06-04b_holder, 
+#form06-05a_holder, #form06-05b_holder, 
+#sort00-01_holder, #sort00-02_holder, #sort00-03_holder, #sort00-04_holder, 
+#update00-01_holder, #update00-02_holder, #update01-01_holder, #update01-02_holder {max-height:100px;height:auto !important;height:100px;}
+
+/*force dropdown extends*/
+#form05-04a_holder, #form05-04b_holder, #form05-05a_holder, #form05-05b_holder, #form05-06a_holder, #form05-06b_holder, #form05-07a_holder, #form05-07b_holder, 
+#form06-04a_holder, #form06-04b_holder, #form06-05a_holder, #form06-05b_holder {height:100px;position:static;}
+
+.search-filter {min-width:270px;width:auto !important;width:270px;}
+
+#tabz .form00 {min-width:600px;width:auto !important;width:600px;}
+.btn-280-45{
+  background:transparent url(../images/btn-280-45.gif) no-repeat;
+  height:45px;
+  margin-right:-20px;
+  padding:7px 10px 0;
+  width:280px;
+  color:#fff !important;
+  text-decoration:none !important;
+  font-size:1.3em;
+}
+.search-form-inner-grey-big{
+  margin-right:0px;
+}
+.main-content ul li{
+  margin-left:20px;
+}
+.form-inner, .form00{
+  width:434px;
+}
+.inner-panel_lg_holder .category_holder h4{
+    width:800px;
+}
+.fix-ie-preface{
+    width:900px;
+}
+.form-inner{
+    width:415px;
+}
+.panel-bg-grey{
+   margin-left:-3px;
+}
+.panel-bg-grey .ui-widget-header{
+  margin-left:4px;
+  margin-right:-3px;
+}
+#tabs #search{
+  padding-right:40px;
+}
+.search-pane{
+    width:250px;
+}
+.view_panel_search #taby_h1,.view_panel_search #taby_h2{
+    width:628px;
+}

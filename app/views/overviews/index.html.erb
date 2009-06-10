@@ -1,0 +1,239 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*custom selects*/
+		$('#searchtype').SelectCustomizer();
+	});
+</script>
+
+
+<%= render :partial => 'common/front_end_tabs' %>
+
+<div class="main-content bgcolor-grey">
+	<div id="trail">
+		Home
+	</div>
+	<div class="clearfix">
+
+		<div class="just-panel just-panel-home">
+			<h1>Welcome message goes here</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio.
+			Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat.
+			Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+			Donec vulputate faucibus risus ut sollicitudin.</p>
+		</div>
+
+
+		<div id="search2">
+			<form method="get" action="app-search.html">
+				<div class="search-form-inner-grey-big float-right distance-bottom">
+					<input type="text" id="site-search" value="" />
+					<div class="options">
+						<input type="radio" name="mainsearch" id="o_expert" checked="checked" /><label for="o_expert">Expert</label>
+						<input type="radio" name="mainsearch" id="o_job" /><label for="o_job">Job</label>
+					</div>
+					<input type="submit" name="submit" class="search" title="Search" value="Go" />
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+	<div class="clearfix">
+	
+		<div class="inner-panel_hf_holder holder-bg-grey">
+			<h2>&nbsp; <a href="#" class="toggle tog01" title="expand/collapse"></a></h2>
+			<div class="inner-panel_hf panel-bg-grey">
+
+				<div id="taby_h1" class="clearfix">
+					<ul class="indent">
+						<li><a href="#taby_h1-1">Looking for a job?</a></li>
+						<li><a href="#taby_h1-2">Looking for a solution?</a></li>
+					</ul>
+
+					<div id="taby_h1-1">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est.</p>
+
+						<div class="form00 clearfix form-inner-home">
+							<ul class="workflow">
+								<li>
+									<div class="flow-label">
+										<div class="key">1</div>
+										<div class="flow-title">Search for Projects</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-1.png" />
+									</div>
+								</li>
+								<li>
+									<div class="flow-label">
+										<div class="key">2</div>
+										<div class="flow-title">Create an account</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-2.png" />
+									</div>
+								</li>
+								<li>
+									<div class="flow-label">
+										<div class="key">3</div>
+										<div class="flow-title">Post your Profile</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-3.png" />
+									</div>
+								</li>
+								<li>
+									<div class="flow-label">
+										<div class="key">4</div>
+										<div class="flow-title">Quote a job</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-1.png" />
+									</div>
+								</li>
+								<li>
+									<div class="flow-label">
+										<div class="key">5</div>
+										<div class="flow-title">Work on projects</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-2.png"/>
+									</div>
+								</li>
+								<li>
+									<div class="flow-label">
+										<div class="key">6</div>
+										<div class="flow-title">Get paid</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-3.png" />
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div id="taby_h1-2">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Vivamus eros dui, ornare id molestie vel, placerat id odio.
+						Nam non lorem id mauris rutrum euismod vel at est.</p>
+
+						<div class="form00 clearfix form-inner-home">
+							<ul class="workflow">
+								<li>
+									<div class="flow-label">
+										<div class="key">1</div>
+										<div class="flow-title"> Search for Providers</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-1.png" />
+									</div>
+								</li>
+								<li>
+									<div class="flow-label">
+										<div class="key">2</div>
+										<div class="flow-title">Create an account</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-2.png" />
+									</div>
+								</li>
+								<li>
+									<div class="flow-label">
+										<div class="key">3</div>
+										<div class="flow-title">Post a job</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-3.png" />
+									</div>
+								</li>
+								<li>
+									<div class="flow-label">
+										<div class="key">4</div>
+										<div class="flow-title">Send invitations / Receive quotes</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-1.png" />
+									</div>
+								</li>
+								<li>
+									<div class="flow-label">
+										<div class="key">5</div>
+										<div class="flow-title">Manage your projects</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-2.png" />
+									</div>
+								</li>
+								<li>
+									<div class="flow-label">
+										<div class="key">6</div>
+										<div class="flow-title">Pay</div>
+									</div>
+									<div class="flow-body">
+										<img alt="" class="flow-item" src="/images/flow-3.png" />
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="just-panel just-panel-home hang">
+
+			<div class="search-form-inner-grey-big">
+				<a href="#" class="btn-280-45 align-center">Watch a video</a>
+			</div>
+
+			<div class="form00 clearfix">
+				<h1>Do you want help other people?</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. <a href="#">View our list of jobs</a></p>
+
+				<h1>Dou you need some Advice?</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. <a href="#">Browse providers' profiles</a></p>
+
+				<p class="align-center"><a href="/signup" class="btn-300-45">Create an account</a></p>
+				
+				<p class="align-center">OR</p>
+				<p class="align-center"><a href="/signin" class="btn-300-45">Sign in</a></p>
+			</div>
+			
+		</div>
+
+	</div>
+	
+</div>
+  
+<div class="main-content">
+	<div class="just-panel just-panel-home spacing-right">
+		<h1>All your projects in one place</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio.
+		Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat.
+		Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+		Donec vulputate faucibus risus ut sollicitudin.<a href="#">view online tutorials</a></p>
+	</div>
+	<div class="just-panel just-panel-home hang">
+		<h1>Communicate with various methods</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio.
+		Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat.
+		Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+		Donec vulputate faucibus risus ut sollicitudin.<a href="#">view online tutorials</a></p>
+	</div>
+	<div class="just-panel just-panel-home spacing-right">
+		<h1>Always notified</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio.
+		Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat.
+		Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+		Donec vulputate faucibus risus ut sollicitudin.<a href="#">view online tutorials</a></p>
+	</div>
+	<div class="just-panel just-panel-home hang">
+		<h1>Manage your payments online</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio.
+		Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat.
+		Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+		Donec vulputate faucibus risus ut sollicitudin.<a href="#">view online tutorials</a></p>
+	</div>
+	<div class="clear c0">&nbsp;</div>
+</div>

@@ -1,0 +1,256 @@
+.main-content ul {
+padding-left:50px}
+
+.rating-table {
+background:#fff;
+padding:0 10px;
+font-size:0.75em;
+width:875px;
+border:1px solid #ddd}
+
+.rating-table .row {
+clear:both;
+padding:25px 0}
+
+.rating-table .row .col1, .rating-table .row .col2, .rating-table .row .col3 {
+float:left}
+
+.rating-table .row .col1 {
+width:100px;
+font-weight:bold}
+
+.rating-table .row .col2 {
+width:300px;
+margin-right:5px}
+
+.rating-table .row .col2 img {
+margin:-5px 0 0 40px}
+
+.rating-table .row .col3 {
+width:470px}
+
+textarea.ft {
+width:890px;
+font-size:0.8em}
+
+textarea.fs {
+width:745px;
+height:200px}
+
+#feed input[type="checkbox"], #feed label, #feed .ui-checkbox {
+float:left;
+margin-top:5px}
+
+#feed label {
+width:300px;
+text-align:left;
+font-weight:normal;
+font-size:0.75em;
+margin-top:6px}
+
+#feed .submit {
+float:right}
+
+#header .search {
+width:90px;
+overflow:hidden;
+min-width:90px}
+
+.clear0 {
+clear:both;
+height:0;
+line-height:0}
+
+.quote-table {
+width:900px;
+font-size:0.75em;
+margin:10px 5px;
+border-bottom:1px solid #ddd;
+border-left:1px solid #ddd}
+
+.quote-table thead {
+border-left:1px solid}
+
+.quote-table th, .quote-table tr td {
+padding:5px;
+border-top:1px solid #ddd;
+border-right:1px solid #ddd}
+
+.quote-table th {white-space:nowrap;background:#f5f4f2}
+
+.quote-table tr {
+background:#fff}
+
+.form00 table.quote-table {
+border-left:1px solid #ddd;
+border-bottom:1px solid #ddd}
+
+.quote-table .col2, .quote-table .col3, .quote-table .col4 {
+width:190px}
+
+.quote-table tfoot {
+color:#ff0000}
+
+.inner-panel_hf_holder .form00 {
+min-width:425px}
+
+.inner-panel_hf_holder.hang .form00 {
+min-width:440px}
+
+#req ol li {
+list-style-type:decimal}
+
+.req-left {
+float:left;
+width:500px;
+margin:0 10px 0 0}	
+
+.req-right {
+float:left;
+margin-top:12px}
+
+.req-right .det-label {
+font-size:0.8em;
+color:#555;
+margin-bottom:5px;
+clear:both}
+
+.req-right .det-label span {
+font-weight:bold;
+width:150px;
+display:block;
+float:left;
+margin-right:5px}
+
+.req-right .det-label.user {
+background:#eee;
+padding:5px;
+display:block;
+width:405px}
+
+.req-right .det-label.user span {
+width:145px}
+
+.button.right {
+float:right;
+margin-top:25px}
+
+.main-content .minijoblist li {
+list-style-type:decimal;
+border-bottom:1px dotted #999;
+padding:5px 0}
+
+.main-content .minijoblist li:last-child {
+border-bottom:none}
+
+.main-content .minijoblist li a {
+font-weight:bold}
+
+.main-content .minijoblist li span {
+display:block}
+
+.purple {
+background:#6C8CC7;
+width:440px;
+margin:10px 0;
+padding:5px}
+
+.innerpurple {
+border:2px dashed #023354;
+padding:5px;
+color:#fff;
+font-weight:bold}
+
+#taby_s2-2 h2 {
+color:#023354;
+font-weight:bold;
+margin:10px 0 0 0;
+padding:0;
+clear:both}
+
+.proj-view .button.start {
+margin-bottom:10px}
+
+.search-form-inner-grey-big .options {
+float:left;
+width:80px;
+overflow:hidden;
+margin-top:-3px}
+
+.search-form-inner-grey-big input[type=radio] {
+float:left;
+clear:both}
+
+.appcal {
+float:left;
+margin-right:15px;
+margin-bottom:15px}
+
+.appcal h3 {
+background:url(../images/appcal.png) no-repeat;
+height:22px;
+width:288px;
+display:block;
+padding:8px 0 0 10px;
+color:#fff;
+font-weight:bold;
+margin:0}
+
+table.maincal tr.dayname {
+background:#6c8cc7}
+
+table.maincal {
+border:1px solid #ddd;
+margin:0}
+
+table.maincal th, table.maincal td {
+width:40px;
+border:none;
+margin:0;
+text-align:center;
+padding:0}
+
+table.maincal th {
+padding:3px 0}
+
+table.maincal .sun {
+color:#990000}
+
+table.maincal .sun a {
+color:#ff0000}
+
+table.maincal td a {
+display:block;
+padding:5px 0;
+font-weight:bold;
+text-decoration:none}
+
+table.maincal td a:hover {
+color:#555;
+background:url(../images/cal-hover.png) center no-repeat}
+
+table.maincal td a.meeting {
+color:#fff;
+background:url(../images/cal-meeting.png) center no-repeat}
+
+table.maincal td a.meeting:hover {
+background:url(../images/cal-meeting-hover.png) center no-repeat}
+
+#setting .proj-view ul {
+margin:0;
+padding:0}
+
+.label {
+font-weight:bold;
+font-size:11px;
+float:left;
+clear:both;
+width:100px}
+
+.datepicker {
+border:1px solid #ddd;
+background:#FFFCCE;
+float:left;
+width:100px;
+margin-bottom:5px;
+padding:3px}

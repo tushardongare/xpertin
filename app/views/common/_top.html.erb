@@ -1,0 +1,18 @@
+	<div id="header">
+		<h1 title="Xpert-In - The right advice matters"><a href="/"><span>Xpert-In - The right advice matters</span></a></h1>
+		<div id="login">
+			<ul>
+        
+			  <% if !logged_in? %>
+        <li><a href="#" title="About">About us</a></li>
+        <li><a href="#" title="Contact">Contact us</a></li>
+        <li><a href="/login" title="Sign in">Sign in</a></li>
+        <% end %>
+			  <% if logged_in? %>
+				<li><strong> <%= current_user.login %> </strong></li>
+				<li><a href="help.html" title="Help">Help</a></li>
+				<li><%= link_to 'Log Out', logout_url %></li>
+				<% end %>
+			</ul>
+		</div>
+	</div>

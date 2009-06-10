@@ -1,0 +1,81 @@
+
+
+
+<%= render :partial => 'common/front_end_tabs' %>
+
+<div class="main-content">
+    <div id="trail">
+		<a href="/">Home</a> &#187; Sign in 
+	</div>
+    <div class="inner-panel_lg_holder">
+		<h2>Sign in</h2>
+		<div class="inner-panel_lg">
+			<div id="tabx" class="clearfix">
+				<div class="form00 fix-ie-preface">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vulputate faucibus risus ut sollicitudin.</p>
+				</div>
+          
+				<div class="just-panel">
+					<% form_tag session_path do -%>
+						<%= flash[:notice] %>
+						<%= flash[:alert] %>
+						<div class="form00 clearfix">
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+									<td><label for="form00-01">Email</label></td>
+									<td><%= text_field_tag 'login', @login , :id=>"form00-01" %></td>
+								</tr>
+								<tr>
+									<td><label for="form00-02">Password</label></td>
+									<td><%= password_field_tag 'password', nil , :id=>"form00-02" %></td>
+								</tr>
+								<tr>
+									<td>&nbsp;</td>
+									<td><%= submit_tag 'Sign in', :class=>"submit" %> <a href="#"> Cancel</a></td>
+								</tr>
+								<tr>
+									<td>&nbsp;</td>
+									<td><a href="#"><i>I forgot my password</i></a></td>
+								</tr>
+							</table>
+						</div>
+					<% end -%>
+				</div>
+
+				<div class="just-panel hang">
+					<div class="form00 clearfix">
+						<h1>Don't have an account yet?</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vulputate faucibus risus ut sollicitudin.</p>
+
+						<ul class="clear-padding distance-bottom">
+							<li>Advantage 1</li>
+							<li>Advantage 1</li>
+							<li>Advantage 1</li>
+							<li>Advantage 1</li>
+						</ul>
+
+						<div class="button">
+							<a href="/users/client_index" class="distance-bottom" title="Client - Start now">Client - Start now</a>
+						</div>
+						
+						<p class="clear-both">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Donec vulputate faucibus risus ut sollicitudin.</p>
+
+						<ul class="clear-padding distance-bottom">
+							<li>Advantage 1</li>
+							<li>Advantage 1</li>
+							<li>Advantage 1</li>
+							<li>Advantage 1</li>
+						</ul>
+						
+						<div class="button distance-bottom">
+							<a href="/users/provider_index" title="Providers - Start now">Providers - Start now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	<div class="clear c0">&nbsp;</div>
+
+</div>

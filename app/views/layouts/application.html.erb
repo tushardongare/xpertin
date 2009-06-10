@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<%= render :partial => 'common/head' %>
+</head>
+<body id="home">
+<div class="container clearfix" id="top">
+
+<%= render :partial => 'common/top' %>
+	
+	<div id="tabs">
+		<%= yield :layout %>
+		<div class="clear c0">&nbsp;</div>
+	</div>
+	
+<%= render :partial => 'common/footer' %>
+</div>
+</body>
+</html>

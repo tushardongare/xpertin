@@ -1,0 +1,3527 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-08 06:31:42) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-08 06:31:47) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-08 06:31:50) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (235.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (234.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090609071328)
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(40), `name` varchar(100) DEFAULT '', `email` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (156.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090609071328')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090609071328)
+Migrating to CreateRoles (20090609071434)
+  [4;36;1mSQL (31.0ms)[0m   [0;1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE TABLE `roles_users` (`role_id` int(11), `user_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (203.0ms)[0m   [0;1mCREATE INDEX `index_roles_users_on_role_id` ON `roles_users` (`role_id`)[0m
+  [4;35;1mSQL (203.0ms)[0m   [0mCREATE INDEX `index_roles_users_on_user_id` ON `roles_users` (`user_id`)[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090609071434')[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:09:31) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:09:51) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-09 13:10:04) [GET]
+  [4;36;1mUser Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Completed in 5016ms (View: 4422, DB: 32) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-09 13:10:50) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry3", "password"=>"trytry3", "login"=>"tushar", "email"=>"tushar.dongare@pragtech.co.in"}, "commit"=>"Sign up", "authenticity_token"=>"Czo1puRoyqzTzDNNBsl6MF/ODGRC1pVgvueJtmmeFZI=", "role"=>"client"}
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'client') [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (47.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'tushar') LIMIT 1[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'tushar.dongare@pragtech.co.in') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `updated_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '8735c9d175ef92d0c9d3b294c5860771846d2add', '2009-06-09 07:40:51', NULL, '18f382f560caaefe0803af5cee979f0fb5f40642', NULL, 'f80ce1b59ecd50c405cfc776b67a65f0145b7511', NULL, 'tushar', 'tushar.dongare@pragtech.co.in', '2009-06-09 07:40:51')[0m
+  [4;36;1mroles_users Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (3, 1)[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/good
+Completed in 1110ms (DB: 171) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:10:51) [GET]
+
+ActionController::RoutingError (No route matches "/good" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:17:51) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-09 13:18:05) [GET]
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (Missing template common/_head.erb in view path app/views) on line #4 of app/views/layouts/application.html.erb:
+1: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+2: <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+3: <head>
+4: <%= render :partial => 'common/head' %>
+5: </head>
+6: <body id="home">
+7: <div class="container clearfix" id="top">
+
+    app/views/layouts/application.html.erb:4
+
+Rendered rescues/_trace (750.0ms)
+Rendered rescues/_request_and_response (32.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-09 13:19:32) [GET]
+  [4;36;1mUser Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 375ms (View: 156, DB: 31) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:19:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:19:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-09 13:19:49) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 79ms (View: 63, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:19:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:19:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-09 13:24:41) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"Czo1puRoyqzTzDNNBsl6MF/ODGRC1pVgvueJtmmeFZI=", "login"=>"tushar", "password"=>"trytry3"}
+  [4;36;1mUser Load (62.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+Failed login for 'tushar' from 127.0.0.1 at Tue Jun 09 07:54:41 UTC 2009
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (15.0ms)
+Rendered common/_top (16.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 250ms (View: 156, DB: 62) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:24:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:24:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-09 13:25:05) [GET]
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 109ms (View: 78, DB: 15) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:25:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:25:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-09 13:25:30) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"try1", "password"=>"try1", "login"=>"tush", "email"=>"tushar.dongare@pragtech.co.in"}, "commit"=>"Sign up", "authenticity_token"=>"Czo1puRoyqzTzDNNBsl6MF/ODGRC1pVgvueJtmmeFZI=", "role"=>"provider"}
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'provider') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (16.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'tush') LIMIT 1[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'tushar.dongare@pragtech.co.in') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 500ms (View: 47, DB: 46) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:25:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:25:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-09 13:26:38) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"try1", "password"=>"try1", "login"=>"tushar", "email"=>"tushar.dongare@pragtech.co.in"}, "commit"=>"Sign up", "authenticity_token"=>"Czo1puRoyqzTzDNNBsl6MF/ODGRC1pVgvueJtmmeFZI=", "role"=>"provider"}
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (16.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'provider') [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'tushar') LIMIT 1[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'tushar.dongare@pragtech.co.in') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 219ms (View: 31, DB: 47) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:26:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:26:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-09 13:27:05) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry3", "password"=>"trytry3", "login"=>"tushar", "email"=>"tushar.dongare@pragtech.co.in"}, "commit"=>"Sign up", "authenticity_token"=>"Czo1puRoyqzTzDNNBsl6MF/ODGRC1pVgvueJtmmeFZI=", "role"=>"provider"}
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (15.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'provider') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'tushar') LIMIT 1[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'tushar.dongare@pragtech.co.in') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `updated_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('', 'e1368a7dc784e81651784b6803eeae312f4ef753', '2009-06-09 07:57:06', NULL, 'e1ba4a279992be31f76e3d963aadf5e607324de9', NULL, '62f5a21d4d4fe77e7eab5faa30b1d9120073f168', NULL, 'tushar', 'tushar.dongare@pragtech.co.in', '2009-06-09 07:57:06')[0m
+  [4;35;1mroles_users Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (2, 2)[0m
+Sent mail to tushar.dongare@pragtech.co.in
+
+Date: Tue, 9 Jun 2009 13:27:06 +0530
+From: ADMINEMAIL
+To: tushar.dongare@pragtech.co.in
+Subject: xpert-in.com Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: tushar
+  Password: trytry3
+
+Visit this url to activate your account:
+
+  http://localhost:3000/activate/62f5a21d4d4fe77e7eab5faa30b1d9120073f168
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/good
+Completed in 3672ms (DB: 93) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:27:09) [GET]
+
+ActionController::RoutingError (No route matches "/good" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:27:49) [GET]
+
+ActionController::RoutingError (No route matches "/activate/62f5a21d4d4fe77e7eab5faa30b1d9120073f168" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-06-09 13:28:32) [GET]
+  Parameters: {"activation_code"=>"62f5a21d4d4fe77e7eab5faa30b1d9120073f168"}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = '62f5a21d4d4fe77e7eab5faa30b1d9120073f168') LIMIT 1[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (31.0ms)[0m   [0mUPDATE `users` SET `activated_at` = '2009-06-09 07:58:32', `activation_code` = NULL, `updated_at` = '2009-06-09 07:58:33' WHERE `id` = 2[0m
+Sent mail to tushar.dongare@pragtech.co.in
+
+Date: Tue, 9 Jun 2009 13:28:34 +0530
+From: ADMINEMAIL
+To: tushar.dongare@pragtech.co.in
+Subject: xpert-in.com Your account has been activated!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+tushar, your account has been activated.  Welcome aboard!
+
+  http://localhost:3000/
+  [4;36;1mSQL (31.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/login
+Completed in 5078ms (DB: 109) | 302 Found [http://localhost/activate/62f5a21d4d4fe77e7eab5faa30b1d9120073f168]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-09 13:28:38) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:28:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:28:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-09 13:28:50) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"Czo1puRoyqzTzDNNBsl6MF/ODGRC1pVgvueJtmmeFZI=", "login"=>"tushar", "password"=>"trytry3"}
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/new
+Completed in 78ms (DB: 47) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-09 13:28:51) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_head (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered common/_top (16.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 94ms (View: 63, DB: 15) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:28:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 13:28:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-09 14:16:40) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_head (0.0ms)
+  [4;35;1mUser Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered common/_top (406.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 1062ms (View: 937, DB: 47) | 200 OK [http://localhost/overviews]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-09 14:17:04) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_head (0.0ms)
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered common/_top (32.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 93ms (View: 62, DB: 32) | 200 OK [http://localhost/overviews]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:17:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:17:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-06-09 14:22:37) [GET]
+Redirected to http://localhost:3000/
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:22:41) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-09 14:23:50) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (16.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 31, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:23:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:23:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-09 14:23:58) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:23:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:24:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-09 14:24:20) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:24:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:24:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-09 14:24:26) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:24:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:24:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-09 14:27:32) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+ERROR: compiling _run_erb_app47views47sessions47new46html46erb RAISED compile error
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:105: syntax error, unexpected kENSURE, expecting kEND
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:107: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47sessions47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!--\n"
+@output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat(( flash[:alert] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<h1>Log In</h1>\n"
+@output_buffer.concat "\n"
+ form_tag session_path do 
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'login' ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat(( text_field_tag 'login', @login ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'password' ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat(( password_field_tag 'password', nil ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat " Uncomment this if you want this functionality\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'remember_me', 'Remember me' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat(( check_box_tag 'remember_me', '1', @remember_me ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( submit_tag 'Log in' ).to_s); @output_buffer.concat "</p>-->\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div id=\"nav\">\n"
+@output_buffer.concat "\t<ul class=\"clearfix\">\n"
+@output_buffer.concat "\t\t<li class=\"selected\"><a href=\"/\">Overview</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"#\">Why to use Xpert-in?</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"/providers\">Providers</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"/jobs\">Jobs</a></li>\n"
+@output_buffer.concat "\t</ul>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div class=\"main-content\">\n"
+@output_buffer.concat "    <div id=\"trail\">\n"
+@output_buffer.concat "\t\t<a href=\"/\">Home</a> &#187; Sign in \n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "    <div class=\"inner-panel_lg_holder\">\n"
+@output_buffer.concat "\t\t<h2>Sign in</h2>\n"
+@output_buffer.concat "\t\t<div class=\"inner-panel_lg\">\n"
+@output_buffer.concat "\t\t\t<div id=\"tabx\" class=\"clearfix\">\n"
+@output_buffer.concat "\t\t\t\t<div class=\"form00 fix-ie-preface\">\n"
+@output_buffer.concat "\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "\t\t\t\t<div class=\"just-panel\">\n"
+@output_buffer.concat "\t\t\t\t\t";  form_tag session_path do 
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"form00 clearfix\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<table cellpadding=\"0\" cellspacing=\"0\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><label for=\"form00-01\">Email</label></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>"; @output_buffer.concat(( text_field_tag 'login', @login ).to_s); @output_buffer.concat "<input type=\"text\" id=\"form00-01\" value=\"\" /></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><label for=\"form00-02\">Password</label></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>"; @output_buffer.concat(( password_field_tag 'password', nil ).to_s); @output_buffer.concat "<input type=\"text\" id=\"form00-02\" value=\"\" /></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>&nbsp;</td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><input type=\"submit\" value=\"Sign in\" title=\"Save\" class=\"submit\" /> <a href=\"#\">Cancel</a></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>&nbsp;</td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><a href=\"#\"><i>I forgot my password</i></a></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t</table>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t";  end 
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<div class=\"just-panel hang\">\n"
+@output_buffer.concat "\t\t\t\t\t<div class=\"form00 clearfix\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<h1>Don't have an account yet?</h1>\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul class=\"clear-padding distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"button\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<a href=\"/users/client_index\" class=\"distance-bottom\" title=\"Client - Start now\">Client - Start now</a>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t\t\n"
+@output_buffer.concat "\t\t\t\t\t\t<p class=\"clear-both\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul class=\"clear-padding distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\n"
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"button distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<a href=\"/users/provider_index\" title=\"Providers - Start now\">Providers - Start now</a>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t<div class=\"clear c0\">&nbsp;</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</div>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:107:in `compile!'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:105: syntax error, unexpected kENSURE, expecting kEND
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:107: syntax error, unexpected $end, expecting kEND) on line #105 of app/views/sessions/new.html.erb:
+102: 
+103: </div>
+
+    app/views/sessions/new.html.erb:107:in `compile!'
+
+Rendered rescues/_trace (547.0ms)
+Rendered rescues/_request_and_response (32.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-09 14:28:28) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+ERROR: compiling _run_erb_app47views47sessions47new46html46erb RAISED compile error
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:105: syntax error, unexpected kENSURE, expecting kEND
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:107: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47sessions47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!--\n"
+@output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat(( flash[:alert] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<h1>Log In</h1>\n"
+@output_buffer.concat "\n"
+ form_tag session_path do 
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'login' ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat(( text_field_tag 'login', @login ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'password' ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat(( password_field_tag 'password', nil ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat " Uncomment this if you want this functionality\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'remember_me', 'Remember me' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat(( check_box_tag 'remember_me', '1', @remember_me ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( submit_tag 'Log in' ).to_s); @output_buffer.concat "</p>-->\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div id=\"nav\">\n"
+@output_buffer.concat "\t<ul class=\"clearfix\">\n"
+@output_buffer.concat "\t\t<li class=\"selected\"><a href=\"/\">Overview</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"#\">Why to use Xpert-in?</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"/providers\">Providers</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"/jobs\">Jobs</a></li>\n"
+@output_buffer.concat "\t</ul>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div class=\"main-content\">\n"
+@output_buffer.concat "    <div id=\"trail\">\n"
+@output_buffer.concat "\t\t<a href=\"/\">Home</a> &#187; Sign in \n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "    <div class=\"inner-panel_lg_holder\">\n"
+@output_buffer.concat "\t\t<h2>Sign in</h2>\n"
+@output_buffer.concat "\t\t<div class=\"inner-panel_lg\">\n"
+@output_buffer.concat "\t\t\t<div id=\"tabx\" class=\"clearfix\">\n"
+@output_buffer.concat "\t\t\t\t<div class=\"form00 fix-ie-preface\">\n"
+@output_buffer.concat "\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "\t\t\t\t<div class=\"just-panel\">\n"
+@output_buffer.concat "\t\t\t\t\t";  form_tag session_path do 
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"form00 clearfix\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<table cellpadding=\"0\" cellspacing=\"0\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><label for=\"form00-01\">Email</label></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>"; @output_buffer.concat(( text_field_tag 'login', @login ).to_s); @output_buffer.concat "<input type=\"text\" id=\"form00-01\" value=\"\" /></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><label for=\"form00-02\">Password</label></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>"; @output_buffer.concat(( password_field_tag 'password', nil ).to_s); @output_buffer.concat "<input type=\"text\" id=\"form00-02\" value=\"\" /></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>&nbsp;</td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>"; @output_buffer.concat(( submit_tag 'Sign in' ).to_s); @output_buffer.concat "<input type=\"submit\" value=\"Sign in\" title=\"Save\" class=\"submit\" /> <a href=\"#\">Cancel</a></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>&nbsp;</td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><a href=\"#\"><i>I forgot my password</i></a></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t</table>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t";  end 
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<div class=\"just-panel hang\">\n"
+@output_buffer.concat "\t\t\t\t\t<div class=\"form00 clearfix\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<h1>Don't have an account yet?</h1>\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul class=\"clear-padding distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"button\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<a href=\"/users/client_index\" class=\"distance-bottom\" title=\"Client - Start now\">Client - Start now</a>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t\t\n"
+@output_buffer.concat "\t\t\t\t\t\t<p class=\"clear-both\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul class=\"clear-padding distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\n"
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"button distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<a href=\"/users/provider_index\" title=\"Providers - Start now\">Providers - Start now</a>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t<div class=\"clear c0\">&nbsp;</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</div>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:107:in `compile!'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:105: syntax error, unexpected kENSURE, expecting kEND
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:107: syntax error, unexpected $end, expecting kEND) on line #105 of app/views/sessions/new.html.erb:
+102: 
+103: </div>
+
+    app/views/sessions/new.html.erb:107:in `compile!'
+
+Rendered rescues/_trace (797.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-09 14:28:55) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+ERROR: compiling _run_erb_app47views47sessions47new46html46erb RAISED compile error
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:104: syntax error, unexpected kENSURE, expecting kEND
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:106: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47sessions47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!--\n"
+@output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat(( flash[:alert] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<h1>Log In</h1>\n"
+@output_buffer.concat "\n"
+ form_tag session_path do 
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'login' ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat(( text_field_tag 'login', @login ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'password' ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat(( password_field_tag 'password', nil ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat " Uncomment this if you want this functionality\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'remember_me', 'Remember me' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat(( check_box_tag 'remember_me', '1', @remember_me ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( submit_tag 'Log in' ).to_s); @output_buffer.concat "</p>-->\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div id=\"nav\">\n"
+@output_buffer.concat "\t<ul class=\"clearfix\">\n"
+@output_buffer.concat "\t\t<li class=\"selected\"><a href=\"/\">Overview</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"#\">Why to use Xpert-in?</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"/providers\">Providers</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"/jobs\">Jobs</a></li>\n"
+@output_buffer.concat "\t</ul>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div class=\"main-content\">\n"
+@output_buffer.concat "    <div id=\"trail\">\n"
+@output_buffer.concat "\t\t<a href=\"/\">Home</a> &#187; Sign in \n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "    <div class=\"inner-panel_lg_holder\">\n"
+@output_buffer.concat "\t\t<h2>Sign in</h2>\n"
+@output_buffer.concat "\t\t<div class=\"inner-panel_lg\">\n"
+@output_buffer.concat "\t\t\t<div id=\"tabx\" class=\"clearfix\">\n"
+@output_buffer.concat "\t\t\t\t<div class=\"form00 fix-ie-preface\">\n"
+@output_buffer.concat "\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "\t\t\t\t<div class=\"just-panel\">\n"
+@output_buffer.concat "\t\t\t\t\t";  form_tag session_path do 
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"form00 clearfix\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<table cellpadding=\"0\" cellspacing=\"0\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><label for=\"form00-01\">Email</label></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>"; @output_buffer.concat(( text_field_tag 'login', @login ).to_s); @output_buffer.concat "<input type=\"text\" id=\"form00-01\" value=\"\" /></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><label for=\"form00-02\">Password</label></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>"; @output_buffer.concat(( password_field_tag 'password', nil ).to_s); @output_buffer.concat "<input type=\"text\" id=\"form00-02\" value=\"\" /></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>&nbsp;</td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>"; @output_buffer.concat(( submit_tag 'Sign in' ).to_s); @output_buffer.concat "<input type=\"submit\" value=\"Sign in\" title=\"Save\" class=\"submit\" /> <a href=\"#\">Cancel</a></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>&nbsp;</td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><a href=\"#\"><i>I forgot my password</i></a></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t</table>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t";  end 
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<div class=\"just-panel hang\">\n"
+@output_buffer.concat "\t\t\t\t\t<div class=\"form00 clearfix\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<h1>Don't have an account yet?</h1>\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul class=\"clear-padding distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"button\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<a href=\"/users/client_index\" class=\"distance-bottom\" title=\"Client - Start now\">Client - Start now</a>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t\t\n"
+@output_buffer.concat "\t\t\t\t\t\t<p class=\"clear-both\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul class=\"clear-padding distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\n"
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"button distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<a href=\"/users/provider_index\" title=\"Providers - Start now\">Providers - Start now</a>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t<div class=\"clear c0\">&nbsp;</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</div>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:106:in `compile!'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:104: syntax error, unexpected kENSURE, expecting kEND
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:106: syntax error, unexpected $end, expecting kEND) on line #104 of app/views/sessions/new.html.erb:
+101: 	<div class="clear c0">&nbsp;</div>
+102: 
+103: </div>
+
+    app/views/sessions/new.html.erb:106:in `compile!'
+
+Rendered rescues/_trace (359.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-09 14:29:54) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+ERROR: compiling _run_erb_app47views47sessions47new46html46erb RAISED compile error
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:104: syntax error, unexpected kENSURE, expecting kEND
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:106: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47sessions47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "\n"
+@output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat(( flash[:alert] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<!--\n"
+@output_buffer.concat "<h1>Log In</h1>\n"
+@output_buffer.concat "\n"
+ form_tag session_path do 
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'login' ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat(( text_field_tag 'login', @login ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'password' ).to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat(( password_field_tag 'password', nil ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat " Uncomment this if you want this functionality\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( label_tag 'remember_me', 'Remember me' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat(( check_box_tag 'remember_me', '1', @remember_me ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( submit_tag 'Log in' ).to_s); @output_buffer.concat "</p>-->\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div id=\"nav\">\n"
+@output_buffer.concat "\t<ul class=\"clearfix\">\n"
+@output_buffer.concat "\t\t<li class=\"selected\"><a href=\"/\">Overview</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"#\">Why to use Xpert-in?</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"/providers\">Providers</a></li>\n"
+@output_buffer.concat "\t\t<li><a href=\"/jobs\">Jobs</a></li>\n"
+@output_buffer.concat "\t</ul>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div class=\"main-content\">\n"
+@output_buffer.concat "    <div id=\"trail\">\n"
+@output_buffer.concat "\t\t<a href=\"/\">Home</a> &#187; Sign in \n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "    <div class=\"inner-panel_lg_holder\">\n"
+@output_buffer.concat "\t\t<h2>Sign in</h2>\n"
+@output_buffer.concat "\t\t<div class=\"inner-panel_lg\">\n"
+@output_buffer.concat "\t\t\t<div id=\"tabx\" class=\"clearfix\">\n"
+@output_buffer.concat "\t\t\t\t<div class=\"form00 fix-ie-preface\">\n"
+@output_buffer.concat "\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "          \n"
+@output_buffer.concat "\t\t\t\t<div class=\"just-panel\">\n"
+@output_buffer.concat "\t\t\t\t\t";  form_tag session_path do 
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"form00 clearfix\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<table cellpadding=\"0\" cellspacing=\"0\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><label for=\"form00-01\">Email</label></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>"; @output_buffer.concat(( text_field_tag 'login', @login ).to_s); @output_buffer.concat "<input type=\"text\" id=\"form00-01\" value=\"\" /></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><label for=\"form00-02\">Password</label></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>"; @output_buffer.concat(( password_field_tag 'password', nil ).to_s); @output_buffer.concat "<input type=\"text\" id=\"form00-02\" value=\"\" /></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>&nbsp;</td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>"; @output_buffer.concat(( submit_tag 'Sign in' ).to_s); @output_buffer.concat "<input type=\"submit\" value=\"Sign in\" title=\"Save\" class=\"submit\" /> <a href=\"#\">Cancel</a></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t<tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td>&nbsp;</td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t\t<td><a href=\"#\"><i>I forgot my password</i></a></td>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t\t</tr>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t</table>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t";  end 
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<div class=\"just-panel hang\">\n"
+@output_buffer.concat "\t\t\t\t\t<div class=\"form00 clearfix\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<h1>Don't have an account yet?</h1>\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul class=\"clear-padding distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"button\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<a href=\"/users/client_index\" class=\"distance-bottom\" title=\"Client - Start now\">Client - Start now</a>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t\t\n"
+@output_buffer.concat "\t\t\t\t\t\t<p class=\"clear-both\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio. Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat. Donec vulputate faucibus risus ut sollicitudin.</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul class=\"clear-padding distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li>Advantage 1</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\n"
+@output_buffer.concat "\t\t\t\t\t\t<div class=\"button distance-bottom\">\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<a href=\"/users/provider_index\" title=\"Providers - Start now\">Providers - Start now</a>\n"
+@output_buffer.concat "\t\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t<div class=\"clear c0\">&nbsp;</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</div>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:106:in `compile!'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:104: syntax error, unexpected kENSURE, expecting kEND
+D:/InstantRails-2.0-win/rails_apps/xpertin/app/views/sessions/new.html.erb:106: syntax error, unexpected $end, expecting kEND) on line #104 of app/views/sessions/new.html.erb:
+101: 	<div class="clear c0">&nbsp;</div>
+102: 
+103: </div>
+
+    app/views/sessions/new.html.erb:106:in `compile!'
+
+Rendered rescues/_trace (344.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-09 14:30:28) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (15.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 187ms (View: 187, DB: 15) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:30:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:30:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-09 14:30:56) [POST]
+  Parameters: {"authenticity_token"=>"Sf3nKun5eYFpxPwC1dEdMvy6XP4TKgNmuBJ3dFLFckM=", "login"=>"tushar", "password"=>""}
+Failed login for 'tushar' from 127.0.0.1 at Tue Jun 09 09:00:56 UTC 2009
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:30:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:30:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-09 14:31:10) [POST]
+  Parameters: {"authenticity_token"=>"Sf3nKun5eYFpxPwC1dEdMvy6XP4TKgNmuBJ3dFLFckM=", "login"=>"tushar", "password"=>"trytry1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Failed login for 'tushar' from 127.0.0.1 at Tue Jun 09 09:01:10 UTC 2009
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 125ms (View: 16, DB: 16) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:31:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:31:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-09 14:31:20) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"Sf3nKun5eYFpxPwC1dEdMvy6XP4TKgNmuBJ3dFLFckM=", "login"=>"tushar", "password"=>"trytry3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/new
+Completed in 62ms (DB: 31) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-09 14:31:20) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_head (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:31:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-09 14:31:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (62.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 05:31:34) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_head (31.0ms)
+Rendered common/_top (2906.0ms)
+Rendered common/_footer (16.0ms)
+Completed in 3110ms (View: 3094, DB: 62) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:31:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:31:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 05:31:50) [GET]
+  [4;36;1mUser Columns (281.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 453ms (View: 156, DB: 281) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:31:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:31:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-06-10 05:31:57) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: access_denied, activate, check_roles, create, new, render_optional_error_file, role_requirements, and role_requirements=):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 05:33:48) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 125ms (View: 109, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:33:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:33:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-10 05:33:56) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:33:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:33:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 05:36:26) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (63.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (110.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` IS NULL) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (31.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 1562ms (View: 62, DB: 329) | 200 OK [http://localhost/register]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:36:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:36:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 05:37:05) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (15.0ms)
+Completed in 140ms (View: 125, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:37:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:37:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 05:37:16) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (16.0ms)
+Completed in 94ms (View: 63, DB: 16) | 200 OK [http://localhost/signup]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:37:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:37:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-10 05:37:22) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/signin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:37:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:37:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-10 05:40:37) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/signin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:40:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:40:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-10 05:40:59) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://localhost/signin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:41:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:41:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-10 05:41:26) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/signin]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:41:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:41:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 05:41:51) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/signup]
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:41:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:41:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 05:49:12) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 125ms (View: 109, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:49:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:49:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-10 05:49:38) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/signin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:49:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:49:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 05:56:27) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:56:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:56:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 05:56:32) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 78ms (View: 63, DB: 16) | 200 OK [http://localhost/signup]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:56:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:56:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 05:59:03) [POST]
+  Parameters: {"user"=>{"login"=>""}, "authenticity_token"=>"o++uci7frbxNRMjG6f0ES4Tzac/YYxqeaORJjTHRgis="}
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` IS NULL) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (47.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 297ms (View: 79, DB: 79) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:59:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 05:59:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 06:04:42) [GET]
+  [4;36;1mUser Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 140ms (View: 78, DB: 47) | 200 OK [http://localhost/signup]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:04:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:04:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 06:05:54) [GET]
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 125ms (View: 79, DB: 30) | 200 OK [http://localhost/signup]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:05:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:05:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 06:11:23) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry", "password"=>"trytry1", "login"=>"praju", "email"=>"praju@gamil.com"}, "commit"=>"Create your account", "authenticity_token"=>"o++uci7frbxNRMjG6f0ES4Tzac/YYxqeaORJjTHRgis=", "provider"=>"on"}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (15.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` IS NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'praju') LIMIT 1[0m
+  [4;35;1mUser Exists (16.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'praju@gamil.com') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 219ms (View: 31, DB: 94) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:11:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:11:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 06:17:33) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:17:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:17:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 06:17:38) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 78ms (View: 62, DB: 16) | 200 OK [http://localhost/signup]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:17:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:17:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 06:18:33) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 79ms (View: 47, DB: 16) | 200 OK [http://localhost/signup]
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:18:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:18:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 06:18:38) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"", "password"=>"", "login"=>"", "email"=>""}, "commit"=>"Create your account", "authenticity_token"=>"o++uci7frbxNRMjG6f0ES4Tzac/YYxqeaORJjTHRgis="}
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (16.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` IS NULL) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 219ms (View: 47, DB: 48) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:18:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:18:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 06:21:01) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry1", "password"=>"trytry1", "login"=>"praju", "email"=>"praju@gamil.com"}, "commit"=>"Create your account", "authenticity_token"=>"o++uci7frbxNRMjG6f0ES4Tzac/YYxqeaORJjTHRgis=", "provider"=>"on"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (16.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` IS NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'praju') LIMIT 1[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'praju@gamil.com') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 172ms (View: 31, DB: 31) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:21:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:21:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 06:21:37) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry1", "password"=>"trytry1", "login"=>"praju", "email"=>"praju@gamil.com"}, "commit"=>"Create your account", "authenticity_token"=>"o++uci7frbxNRMjG6f0ES4Tzac/YYxqeaORJjTHRgis=", "provider"=>"on"}
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` IS NULL) [0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'praju') LIMIT 1[0m
+  [4;36;1mUser Exists (16.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'praju@gamil.com') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 203ms (View: 63, DB: 63) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:21:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:21:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-10 06:21:45) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/signin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:21:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:21:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:21:56) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"o++uci7frbxNRMjG6f0ES4Tzac/YYxqeaORJjTHRgis=", "login"=>"tushar", "password"=>"trytry1"}
+  [4;36;1mUser Load (63.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Failed login for 'tushar' from 127.0.0.1 at Wed Jun 10 00:51:56 UTC 2009
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 141ms (View: 16, DB: 78) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:21:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:21:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:22:02) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"o++uci7frbxNRMjG6f0ES4Tzac/YYxqeaORJjTHRgis=", "login"=>"tushar", "password"=>"trytry3"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/new
+Completed in 62ms (DB: 31) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 06:22:03) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered common/_top (16.0ms)
+Rendered common/_footer (234.0ms)
+Completed in 312ms (View: 281, DB: 16) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:22:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:22:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-06-10 06:22:08) [GET]
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 16) | 302 Found [http://localhost/signout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 06:22:08) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:22:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:22:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-10 06:22:14) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/signin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:22:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:22:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:23:17) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"jpd6mdvMqZhOOmsg5FvmHNsdc42cI2Hl+eekZ3I2xSU=", "login"=>"tushar", "password"=>"trytry1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Failed login for 'tushar' from 127.0.0.1 at Wed Jun 10 00:53:17 UTC 2009
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 125ms (View: 62, DB: 0) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:23:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:23:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:24:07) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"jpd6mdvMqZhOOmsg5FvmHNsdc42cI2Hl+eekZ3I2xSU=", "login"=>"tushar", "password"=>""}
+Failed login for 'tushar' from 127.0.0.1 at Wed Jun 10 00:54:07 UTC 2009
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:24:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:24:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:28:19) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"jpd6mdvMqZhOOmsg5FvmHNsdc42cI2Hl+eekZ3I2xSU=", "login"=>"tushar", "password"=>""}
+Failed login for 'tushar' from 127.0.0.1 at Wed Jun 10 00:58:19 UTC 2009
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 94ms (View: 63, DB: 15) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:28:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:28:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:29:25) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"jpd6mdvMqZhOOmsg5FvmHNsdc42cI2Hl+eekZ3I2xSU=", "login"=>"tushar", "password"=>""}
+Failed login for 'tushar' from 127.0.0.1 at Wed Jun 10 00:59:25 UTC 2009
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:29:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:29:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:30:05) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"jpd6mdvMqZhOOmsg5FvmHNsdc42cI2Hl+eekZ3I2xSU=", "login"=>"tushar", "password"=>""}
+Failed login for 'tushar' from 127.0.0.1 at Wed Jun 10 01:00:05 UTC 2009
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (16.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 32ms (View: 32, DB: 16) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:30:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:30:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:30:33) [GET]
+
+ActionController::RoutingError (No route matches "/providers" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090609071328)
+Migrating to CreateRoles (20090609071434)
+Migrating to CreateOverviews (20090609084240)
+  [4;36;1mSQL (172.0ms)[0m   [0;1mCREATE TABLE `overviews` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090609084240')[0m
+Migrating to CreateProviders (20090610010309)
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `providers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090610010309')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `overviews`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `overviews`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW KEYS FROM `overviews`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW FIELDS FROM `providers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `providers`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW KEYS FROM `providers`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090609071328)
+Migrating to CreateRoles (20090609071434)
+Migrating to CreateOverviews (20090609084240)
+Migrating to CreateProviders (20090610010309)
+Migrating to CreateClients (20090610010413)
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `clients` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090610010413')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mdescribe `clients`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `clients`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `overviews`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `overviews`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `overviews`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW FIELDS FROM `providers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `providers`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW KEYS FROM `providers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:38:56) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"jpd6mdvMqZhOOmsg5FvmHNsdc42cI2Hl+eekZ3I2xSU=", "login"=>"tushar", "password"=>"trytry3"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (undefined method `role' for #<User:0x45e9a94>):
+  app/controllers/sessions_controller.rb:23:in `create'
+
+Rendered rescues/_trace (485.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mroles_users Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (16.0ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 2 ) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:54:59) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"jpd6mdvMqZhOOmsg5FvmHNsdc42cI2Hl+eekZ3I2xSU=", "login"=>"tushar", "password"=>"trytry3"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mroles_users Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 2 ) [0m
+
+ActionView::MissingTemplate (Missing template sessions/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:55:13) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"jpd6mdvMqZhOOmsg5FvmHNsdc42cI2Hl+eekZ3I2xSU=", "login"=>"tushar", "password"=>"trytry3"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mroles_users Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 2 ) [0m
+
+ActionView::MissingTemplate (Missing template sessions/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-10 06:55:23) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered common/_top (109.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 203ms (View: 171, DB: 16) | 200 OK [http://localhost/signin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:55:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 06:55:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:55:34) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"jpd6mdvMqZhOOmsg5FvmHNsdc42cI2Hl+eekZ3I2xSU=", "login"=>"tushar", "password"=>"trytry3"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mroles_users Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 2 ) [0m
+
+ActionView::MissingTemplate (Missing template sessions/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-10 06:56:58) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"jpd6mdvMqZhOOmsg5FvmHNsdc42cI2Hl+eekZ3I2xSU=", "login"=>"tushar", "password"=>"trytry3"}
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'tushar' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mroles_users Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 2 ) [0m
+
+ActionView::MissingTemplate (Missing template sessions/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 2 ) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRole Load (32.0ms)[0m   [0;1mSELECT * FROM `roles` LIMIT 1[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+WARNING: Can't mass-assign these protected attributes: occupation
+  [4;36;1mRole Load (31.0ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`id` = '--- :name\n' AND (`roles_users`.user_id = 2 )) [0m
+  [4;35;1mRole Load (16.0ms)[0m   [0mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`name` = '--- :all\n') AND (`roles_users`.user_id = 2 ) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM `users` LIMIT 1[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (78.0ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mroles_users Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (63.0ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 2 ) [0m
+  [4;36;1mRole Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (156.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 08:50:28) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (31.0ms)
+Rendered common/_top (2796.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 3469ms (View: 3469, DB: 172) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:50:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:50:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 08:50:41) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (15.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 125ms (View: 109, DB: 16) | 200 OK [http://localhost/signup]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:50:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:50:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 08:54:07) [GET]
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 110ms (View: 79, DB: 15) | 200 OK [http://localhost/signup]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:54:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:54:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-10 08:55:58) [GET]
+  [4;36;1mUser Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (16.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 140ms (View: 78, DB: 47) | 200 OK [http://localhost/signup]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:55:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:56:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 08:56:47) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry1", "password"=>"trytry1", "login"=>"praju", "email"=>"praju@gamil.com"}, "commit"=>"Create your account", "authenticity_token"=>"Z0atAmwHQhtxhZGXhNPZ8luShu5NiAkJxRS5XxwK8sc=", "role"=>"provider", "agree"=>"agree"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'provider') [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (32.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'praju') LIMIT 1[0m
+  [4;36;1mUser Exists (15.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'praju@gamil.com') LIMIT 1[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 703ms (View: 31, DB: 188) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:56:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:56:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 08:57:03) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry1", "password"=>"trytry1", "login"=>"praju", "email"=>"praju@gamil.com"}, "commit"=>"Create your account", "authenticity_token"=>"Z0atAmwHQhtxhZGXhNPZ8luShu5NiAkJxRS5XxwK8sc=", "role"=>"provider", "agree"=>"agree"}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'provider') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'praju') LIMIT 1[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'praju@gamil.com') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 172ms (View: 32, DB: 48) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:57:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (16.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:57:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 08:57:45) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry1", "password"=>"trytry1", "login"=>"praju", "email"=>"praju@gamil.com"}, "commit"=>"Create your account", "authenticity_token"=>"Z0atAmwHQhtxhZGXhNPZ8luShu5NiAkJxRS5XxwK8sc=", "role"=>"provider", "agree"=>"agree"}
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'provider') [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'praju') LIMIT 1[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'praju@gamil.com') LIMIT 1[0m
+  [4;35;1mUser Create (156.0ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `updated_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '819e0aa0e3881a14fb469bbf12772c9747190707', '2009-06-10 03:27:45', NULL, '8326d359728d7ff5db83c731ff3cbff1aaf7cf98', NULL, '7ce55cecb272511b6bdf5a7b35215f0f717a6195', NULL, 'praju', 'praju@gamil.com', '2009-06-10 03:27:45')[0m
+  [4;36;1mroles_users Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (2, 3)[0m
+Sent mail to praju@gamil.com
+
+Date: Wed, 10 Jun 2009 08:57:46 +0530
+From: ADMINEMAIL
+To: praju@gamil.com
+Subject: xpert-in.com Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: praju
+  Password: trytry1
+
+Visit this url to activate your account:
+
+  http://localhost:3000/activate/7ce55cecb272511b6bdf5a7b35215f0f717a6195
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/good
+Completed in 3031ms (DB: 219) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:57:49) [GET]
+
+ActionController::RoutingError (No route matches "/good" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-10 08:58:24) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (15.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 93ms (View: 78, DB: 0) | 200 OK [http://localhost/signin]
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:58:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:58:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-10 08:59:48) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"trytry1", "password"=>"trytry1", "login"=>"praju", "email"=>"praju@gamil.com"}, "commit"=>"Create your account", "authenticity_token"=>"Z0atAmwHQhtxhZGXhNPZ8luShu5NiAkJxRS5XxwK8sc=", "role"=>"client", "agree"=>"agree"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mRole Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'client') [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'praju') LIMIT 1[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'praju@gamil.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `updated_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('', '4f25b9de36570c8565d3a8742a9df62063c0ad86', '2009-06-10 03:29:48', NULL, '9f53cc8cd993b18e8a2b6ed2f7b5209d576028c1', NULL, 'eb06ab1b424045082b4947d79f7a916a145fd629', NULL, 'praju', 'praju@gamil.com', '2009-06-10 03:29:48')[0m
+  [4;36;1mroles_users Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (3, 4)[0m
+Sent mail to praju@gamil.com
+
+Date: Wed, 10 Jun 2009 08:59:48 +0530
+From: ADMINEMAIL
+To: praju@gamil.com
+Subject: xpert-in.com Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: praju
+  Password: trytry1
+
+Visit this url to activate your account:
+
+  http://localhost:3000/activate/eb06ab1b424045082b4947d79f7a916a145fd629
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 2610ms (DB: 79) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OverviewsController#index (for 127.0.0.1 at 2009-06-10 08:59:51) [GET]
+Rendering template within layouts/application
+Rendering overviews/index
+Rendered common/_front_end_tabs (0.0ms)
+Rendered common/_head (0.0ms)
+Rendered common/_top (0.0ms)
+Rendered common/_footer (0.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:59:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slidebox.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-10 08:59:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery.theme.smoothness.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'praju') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'praju') LIMIT 1[0m
+  [4;36;1mroles_users Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 4 ) [0m
+  [4;36;1mRole Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m

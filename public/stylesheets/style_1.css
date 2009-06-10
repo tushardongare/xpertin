@@ -1,0 +1,361 @@
+/* 
+    Document   : style_1
+    Created on : May 15, 2009, 10:10:38 PM
+    Author     : Rachmat Maulana
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+.bgcolor-grey{
+   background:#eee !important;
+}
+.just-panel{
+  float:left;
+  width:465px;
+  margin:0 0px 10px 0;
+}
+.just-panel-home{
+  width:470px;
+}
+.main-content h1 {
+  font-size:1.2em;
+  font-weight:normal;
+  color:#013d65;
+  margin:5px 0;
+}
+.search-form-inner-grey-big{
+  margin-right:30px;
+}
+.search-form-inner-grey-big input {
+  float:left;
+  width:290px;
+  height:30px;
+  margin:0 10px 0 0;
+  padding:9px 10px 1px;
+  background:url(../images/search-input-big.png);
+  font-size:1.1em;
+  color:#666666;
+  font-weight:100;
+}
+.search-form-inner-grey-big input.search {
+cursor:pointer;
+width:50px;
+height:45px;
+padding:0;
+margin:-1px 0 0 0;
+background:url(../images/go-btn-big.png);
+padding-bottom:8px;
+color:white;
+font-size:1.3em;
+}
+.btn-280-45{
+  background:transparent url(../images/btn-280-45.png) no-repeat;
+  padding:7px 0 12px 0;
+  width:280px;
+  color:#fff !important;
+  text-decoration:none !important;
+  font-size:1.3em;
+  display:block;
+  margin:10px auto 0 auto}
+  
+.float-left{
+    float:left;
+}
+.float-right{
+    float:right;
+}
+.distance-bottom{
+    margin-bottom:20px !important;
+}
+.align-center{
+    text-align:center;
+}
+ul.workflow{
+    padding-left:0px !important;
+}
+ul.workflow li{
+    width:140px;
+    float:left;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:0px;
+    padding-bottom:5px;
+}
+ul.workflow .flow-label{
+  float:left;
+  height:35px;
+}
+ul.workflow .flow-label .key{
+    width:15px;
+    height:15px;
+    background:transparent url(../images/circa.png) no-repeat;
+    padding-left:4px;
+    float:left;
+    color:#fff;
+}
+ul.workflow .flow-label .flow-title{
+    float:left;
+    width:115px;
+    color:#013D65;
+    font-size:1.1em;
+}
+ul.workflow .flow-body{
+  text-align:center;
+  float:left;
+  height:75px;
+}
+.btn-300-45{
+  background:transparent url(../images/btn-300-45.png) no-repeat center;
+  height:45px;
+  padding:12px 10px 0;
+  color:#fff !important;
+  text-decoration:none !important;
+  font-size:1.7em;
+  display:block;
+}
+.clear-padding{
+  padding:0px !important;
+}
+.clear-both{
+    clear:both;
+}
+.color-red{
+    color:red;
+}
+.form00 input[type="checkbox"]{
+    width:auto;
+    background:none;
+    border:none;
+}
+.medium-button{
+   background: transparent url(../images/btn-gen01.gif) no-repeat bottom center !important;
+   width:140px !important;
+}
+.distance-bottom-more{
+    padding-bottom:220px !important;
+}
+.clear-margin{
+  margin:0px !important;
+}
+/*
+* The state classes are a little bit complex, because of the doubble class bug in IE6
+* The state class looks like this:
+*
+* .ui-radio-state[-checked][-disabled][-hover] or .ui-checkbox-state[-checked][-disabled][-hover]
+*
+* Examples:
+*
+* .ui-radio-state-checked (simply checked)
+* .ui-radio-state-checked-hover (checked and hovered/focused)
+* .ui-radio-state-hover (unchecked and hovered/focused)
+*
+*/
+.ui-radio-state-disabled,
+.ui-radio-state-checked-disabled,
+.ui-radio-state-disabled-hover,
+.ui-radio-state-checked-disabled-hover {
+	color: #999;
+}
+span.ui-checkbox,
+span.ui-radio {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(/images/icon_checkbox2.png) -8px -9px no-repeat;
+}
+span.ui-checkbox{
+    background-position: -8px -103px;
+}
+span.ui-helper-hidden {
+  display: none;
+}
+label {
+  padding: 2px;
+}
+span.ui-radio-state-hover{
+  background-position: -8px -33px;
+}
+span.ui-checkbox-state-hover{
+    background-position: -8px -124px;
+}
+
+span.ui-checkbox-state-checked {
+  background-position: -8px -145px;
+}
+
+span.ui-checkbox-state-checked-hover {
+  background-position: -8px -166px;
+}
+span.ui-radio-state-checked-disabled-hover,
+span.ui-radio-state-checked-disabled,
+span.ui-radio-state-checked {
+  background-position: -8px -57px;
+}
+span.ui-radio-state-checked-hover {
+  background-position: -8px -81px;
+}
+.ui-helper-hidden-accessible {
+  display:none;
+}
+span.ui-radio,
+span.ui-checkbox,
+span.ui-radio-state-hover,
+span.ui-checkbox-state-hover,
+span.ui-checkbox-state-checked,
+span.ui-radio-state-checked,
+span.ui-radio-state-checked-hover,
+span.ui-checkbox-state-checked-hover{
+  cursor:pointer;
+  margin-bottom:-2px;
+}
+.list-type-number li{
+    list-style-type:decimal !important;
+}
+.font-size-small{
+    font-size:small;
+}
+a, input.submit{
+   cursor:pointer;
+}
+.add_width_for_single_panel{
+    width:680px;
+}
+.form00 input.x-mini{
+    width:35px;
+}
+.form00 input.medium{
+    width:100px;
+}
+.form00 .x-width td{
+    width:350px;
+}
+.form00 .x-width label, .width-auto{
+    width:auto !important;
+}
+.category_holder{
+    width:900px;
+}
+.check_category_holder{
+  float:left;
+  margin-right:3px;
+  position:relative;
+  width:125px;
+}
+.list-style-type-none li{
+    list-style-type:none !important;
+}
+.just-panel-category{
+  float:left;
+  width:430px;
+  margin:0 12px 10px 0;
+}
+.align-left{
+    text-align:left !important;
+}
+.form-inner{
+    width:417px;
+    min-width:417px;
+}
+.check_category_holder input{
+    display:none;
+}
+select {
+    display:none;
+}
+.form-inner-home{
+    width:420px;
+    min-width:420px;
+}
+.spacing-right{
+    padding-right:10px;
+}
+.holder-bg-grey{
+  background-image:url(../images/inner-panel_hf_holder-2.png);
+}
+.panel-bg-grey{
+  background-image:url(../images/inner-panel_hf-2.png);
+}
+.search-pane{
+    width:250px;
+    min-width:250px;
+}
+.view_panel_search{
+    width:630px;
+    background-image:url(../images/inner-panel_hf_holder-searc.gif);
+    margin:14px 0px 0px 15px;
+}
+.view_panel_search .inner-panel_hf{
+    width:630px;
+    background-image:url(../images/inner-panel_hf-search.gif);
+}
+.view_panel_search #taby_h1,.view_panel_search #taby_h2{
+    width:627px;
+}
+.view_panel_search .inner-panel_hf .ui-tabs .ui-tabs-panel{
+    width:617px;
+}
+.view_panel_search .form00,.view_panel_search .form00 table {
+    width:585px;
+}
+.align-right{
+    text-align:right;
+}
+.view_panel_search .com-item .com-col{
+    width:180px;
+    padding-bottom:50px;
+}
+.view_panel_search h4{
+    width:auto;
+    background:transparent;
+}
+.view_panel_search ul{
+    margin:0px;
+    padding:0px;
+}
+.view_panel_search .com-item .com-col img{
+    width:auto;
+    height:auto;
+}
+.view_panel_search .category_holder{
+    width:585px;
+}
+.view_panel_search .category_holder .check_category_holder{
+    width:110px;
+}
+.view_panel_search .com-item .com-col p{
+    margin:0px;
+}
+.view_panel_search .com-item .com-col .profile-img{
+    width:130px;
+    height:100px;
+}
+.com-item .com-col .detail-link{
+  bottom:45px;
+  right:10px;
+}
+.ui-icon-triangle-1-s, .ui-icon-triangle-1-e{
+  height:16px;
+  width:16px;
+  background:transparent url(../images/list-image.png) no-repeat;
+}
+.zpTreeDefaultContainer .tree-item-selected table.tree-table td.label {
+  background-color:transparent !important;
+  color:inherit !important;
+}
+.view_panel_search table {
+  border:0 none;
+  font-size:0.75em;
+  margin:0;
+  padding:0;
+  float:none;
+}
+.view_panel_search table td {
+  border:0 none;
+  padding:0px;
+  vertical-align:top;
+}
