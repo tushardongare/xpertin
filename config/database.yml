@@ -37,12 +37,12 @@ test:
   password:
   host: localhost
 
+
 production:
   adapter: mysql
-  encoding: utf8
-  reconnect: false
-  database: xpertin_production
-  pool: 5
-  username: root
-  password: 
-  host: localhost
+  database: xpertin
+  username: pragtech
+  password: global
+  host: mysql.pragmatictek.com
+  
+ 
