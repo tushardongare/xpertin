@@ -6,7 +6,7 @@ set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost se
 
 # version control config
 default_run_options[:pty] = true
-set :repository,  " 	"git@github.com:tushardongare/xpertin.git"
+set :repository,  	"git@github.com:tushardongare/xpertin.git"
 set :scm, "git"
 set :scm_passphrase, "" #This is your custom users password
 set :user, "shabbirm"
