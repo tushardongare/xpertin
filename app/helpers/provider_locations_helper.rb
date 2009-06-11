@@ -1,0 +1,2 @@
+module ProviderLocationsHelper
+end

@@ -1,0 +1,33 @@
+<p>
+  <b>Country:</b>
+  <%=h @expert_location.country %>
+</p>
+
+<p>
+  <b>Addressline1:</b>
+  <%=h @expert_location.addressline1 %>
+</p>
+
+<p>
+  <b>Addressline2:</b>
+  <%=h @expert_location.addressline2 %>
+</p>
+
+<p>
+  <b>Postalcode:</b>
+  <%=h @expert_location.postalcode %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @expert_location.city %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @expert_location.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_expert_location_path(@expert_location) %> |
+<%= link_to 'Back', expert_locations_path %>

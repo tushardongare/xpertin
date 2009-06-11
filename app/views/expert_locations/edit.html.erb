@@ -1,9 +1,10 @@
 
+
 <%= render :partial => 'common/front_end_tabs' %>
 
   <div class="main-content">
     <div class="inner-panel_lg_holder">
-      <h2>Step 2 : Create an Account</h2>
+      <h2>Step 4 : Please Insert Your Address</h2>
       <div class="inner-panel_lg">
        <div id="tabx" class="clearfix">
          <div class="form00 fix-ie-preface">
@@ -12,15 +13,15 @@
           Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
           Donec vulputate faucibus risus ut sollicitudin.</p>
 		 </div>
-         <%= error_messages_for :user %>
-		 
+         <%= error_messages_for :expert_location %>	
 		  <!--<h4>
              <input type="radio" id="form00-001" name="role" value="expert"/> I want create to a provider's account &nbsp;&nbsp;
              <input type="radio" id="form00-002" name="role" value="client"/> I want create to a client's account
           </h4>-->
          <div class="just-panel add_width_for_single_panel">
          <!-- <form method="post"> -->
-		  <% form_for :user, :url => users_path do |f| -%>
+		  <% form_for(@expert_location) do |f| %>
+  
           <div class="form00 clearfix">
             <table width="900px" cellpadding="0" cellspacing="0">
               <!--<tr>
@@ -31,39 +32,36 @@
 			  .form00-02 label {width:400px;}
 			  </style>
 			  <tr>
-                <td width="450px"><label for="form00-02">First and Last Name<span class="color-red">*</span> </label></td>
-                <td width="450px"><%= f.text_field :name , :id => "form00-01" %></td>
+                <td width="450px"><label for="form00-02">Country<span class="color-red"></span> </label></td>
+                <td width="450px"><%= f.text_field :country %></td>
               </tr>
 			  <tr>
-                <td width="450px"><label for="form00-02">Username<span class="color-red">*</span> </label></td>
-                <td width="450px"><%= f.text_field :login , :id => "form00-01" %></td>
+                <td width="450px"><label for="form00-02">Address Line 1<span class="color-red"></span> </label></td>
+                <td width="450px"><%= f.text_field :addressline1 %></td>
               </tr>
 			  <tr>
-                <td><label for="form00-02">Email<span class="color-red">*</span> </label></td>
-                <td><%= f.text_field :email %></td>
+                <td><label for="form00-02">Address Line 2<span class="color-red"></span> </label></td>
+                <td><%= f.text_field :addressline2 %></td>
               </tr>
 
               <tr>
-                <td><label for="form00-02">Password<span class="color-red">*</span> </label></td>
-                <td><%= f.password_field :password %></td>
+                <td><label for="form00-02">Postal Code<span class="color-red"></span> </label></td>
+                <td><%= f.text_field :postalcode %></td>
               </tr>
               <tr>
-                <td><label for="form00-02">Confirm Password<span class="color-red">*</span> </label></td>
-                <td><%= f.password_field :password_confirmation %></td>
+                <td><label for="form00-02">City<span class="color-red"></span> </label></td>
+                <td><%= f.password_field :city %></td>
               </tr>
               <tr>
-                <td>&nbsp;<input type="hidden" value="<%= @role %>" name="role" /></td>
-                <td><span class="color-red">*</span> mandatory fields</td>
+                <td><label for="form00-02">Phone<span class="color-red"></span> </label></td>
+                <td><%= f.text_field :phone %></td>
               </tr>
-              <!--<tr>
+
+              <tr>
                 <td>&nbsp;</td>
-                <td>Already have an account : <a href="/signin">sign in</a></td>
-              </tr>-->
-              <tr>
-                <td ><p style="font-size: 12px; position: relative; right: -100px;" align="right"><input  name="agree" value="agree" class="form-checkbox" type="checkbox"  id="form00-06"> <i>I agree with <strong>Term & conditions</strong> and the <strong>Privacy Policy</strong></i></p></td>
                 <td>
 				<%= submit_tag 'Next Step', :style=>"float:right", :class=>"medium-button submit" %> 
-				<input type="button" value="Previous Step" style="float: right;" name="step1" onclick="location.href='/account_type'" class="medium-button submit"/>
+				<!--<input type="button" value="Previous Step" style="float: right;" name="step1" onclick="location.href='/account_type'" class="medium-button submit"/>-->
 				</td>
               </tr>
             </table>

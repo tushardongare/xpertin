@@ -1,0 +1,37 @@
+<h1>Editing provider_location</h1>
+
+<% form_for(@provider_location) do |f| %>
+  <%= f.error_messages %>
+
+<p>
+<b>Country</b><br />
+<%= f.text_field :country %>
+</p>
+<p>
+<b>Address Line 1</b><br />
+<%= f.text_field :addressline1 %>
+</p>
+<p>
+<b>Address Line 1</b><br />
+<%= f.text_field :addressline1 %>
+</p>
+<p>
+<b>Postal Code</b><br />
+<%= f.text_field :postalcode %>
+</p>
+<p>
+<b>City</b><br />
+<%= f.text_field :city %>
+</p>
+<p>
+<b>Phone</b><br />
+<%= f.text_field :phone %>
+</p>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @provider_location %> |
+<%= link_to 'Back', provider_locations_path %>

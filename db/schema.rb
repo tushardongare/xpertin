@@ -9,9 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090610010413) do
+ActiveRecord::Schema.define(:version => 20090611033809) do
 
   create_table "clients", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "expert_locations", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "country",      :limit => 40
+    t.string   "addressline1", :limit => 80
+    t.string   "addressline2", :limit => 80
+    t.integer  "postalcode",   :limit => 8
+    t.string   "city",         :limit => 40
+    t.string   "phone",        :limit => 20
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -19,6 +31,16 @@ ActiveRecord::Schema.define(:version => 20090610010413) do
   create_table "overviews", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "provider_locations", :force => true do |t|
+    t.integer "user_id"
+    t.string  "country",      :limit => 40
+    t.string  "addressline1", :limit => 80
+    t.string  "addressline2", :limit => 80
+    t.integer "postalcode",   :limit => 8
+    t.string  "city",         :limit => 40
+    t.string  "phone",        :limit => 20
   end
 
   create_table "providers", :force => true do |t|

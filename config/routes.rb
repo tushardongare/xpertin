@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :expert_locations
+
+  map.resources :provider_locations
+
   map.resources :clients
 
   map.resources :providers
