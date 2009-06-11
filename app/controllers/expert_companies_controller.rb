@@ -9,7 +9,7 @@ class ExpertCompaniesController < ApplicationController
   
 	@expert_company = ExpertCompany.find_by_user_id(self.current_user.id)
 	if (@expert_company != nil)
-	  redirect_to('/expert_companies/edit/'+@expert_companies.id.to_s)
+	  redirect_to('/expert_companies/edit/'+@expert_company.id.to_s)
 	elsif
 	  redirect_to('/expert_companies/new')
 	end  
