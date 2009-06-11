@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  firstname: MyString
+  lastname: MyString
+  picture: 
+  security: MyString
+  answer: MyString
+  addressline1: MyString
+  addressline2: MyString
+  postalcode: 1
+  city: MyString
+  country: MyString
+  timezone: MyString
+  phonecountrycode: 1
+  phoneareacode: 1
+  phonenumber: 1
+
+two:
+  firstname: MyString
+  lastname: MyString
+  picture: 
+  security: MyString
+  answer: MyString
+  addressline1: MyString
+  addressline2: MyString
+  postalcode: 1
+  city: MyString
+  country: MyString
+  timezone: MyString
+  phonecountrycode: 1
+  phoneareacode: 1
+  phonenumber: 1

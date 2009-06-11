@@ -1,0 +1,321 @@
+<!--<h1>Listing expert_professionals</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Primaryrole</th>
+    <th>Expertin</th>
+    <th>Special1</th>
+    <th>Special2</th>
+    <th>Academic1</th>
+    <th>Academic2</th>
+    <th>Academic3</th>
+    <th>Qualification1</th>
+    <th>Qualification2</th>
+    <th>Qualification3</th>
+    <th>Pastjob1</th>
+    <th>Pastjob2</th>
+    <th>Pastjob3</th>
+    <th>Jobalert</th>
+    <th>Minrate</th>
+    <th>Maxrate</th>
+    <th>Hrsperweek</th>
+  </tr>
+
+<% @expert_professionals.each do |expert_professional| %>
+  <tr>
+    <td><%=h expert_professional.title %></td>
+    <td><%=h expert_professional.primaryrole %></td>
+    <td><%=h expert_professional.expertin %></td>
+    <td><%=h expert_professional.special1 %></td>
+    <td><%=h expert_professional.special2 %></td>
+    <td><%=h expert_professional.academic1 %></td>
+    <td><%=h expert_professional.academic2 %></td>
+    <td><%=h expert_professional.academic3 %></td>
+    <td><%=h expert_professional.qualification1 %></td>
+    <td><%=h expert_professional.qualification2 %></td>
+    <td><%=h expert_professional.qualification3 %></td>
+    <td><%=h expert_professional.pastjob1 %></td>
+    <td><%=h expert_professional.pastjob2 %></td>
+    <td><%=h expert_professional.pastjob3 %></td>
+    <td><%=h expert_professional.jobalert %></td>
+    <td><%=h expert_professional.minrate %></td>
+    <td><%=h expert_professional.maxrate %></td>
+    <td><%=h expert_professional.hrsperweek %></td>
+    <td><%= link_to 'Show', expert_professional %></td>
+    <td><%= link_to 'Edit', edit_expert_professional_path(expert_professional) %></td>
+    <td><%= link_to 'Destroy', expert_professional, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New expert_professional', new_expert_professional_path %>-->
+<script type="text/javascript">
+$(document).ready(function(){
+	/*custom selects*/
+	$('#role00-02').SelectCustomizer();
+});
+</script>
+<div id="tabs">
+    <div id="nav">
+    <ul class="clearfix">
+      <li class="selected"><a href="/">Overview</a></li>
+	  <li><a href="#">Why to use Xpert-in?</a></li>
+	  <li><a href="/providers">Providers</a></li>
+      <li><a href="/jobs">Jobs</a></li>
+	</ul>
+  </div>
+
+  <div class="main-content">
+    <div id="trail">
+      <a href="/">Home</a> &#187; <a href="/users/new">Create an account</a> &#187; 
+      <a href="/users/steps">Next steps</a> &#187; Profesional Information
+	</div>
+
+    <div class="inner-panel_lg_holder">
+      <h2>Professional Information</h2>
+      <div class="inner-panel_lg">
+        <div id="tabx" class="clearfix">
+          <div class="form00 fix-ie-preface">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio.
+            Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat.
+            Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Donec vulputate faucibus risus ut sollicitudin.</p>
+          </div>
+         <!-- <form method="post"> -->
+          <div class="form00 clearfix">
+            <h4>Please choose which of these categories best describe your job. You may choose one or more categories or add a new category.</h4>
+            
+            <div class="category_holder clearfix distance-bottom">
+              <div class="check_category_holder">
+                <a href="#">Category 1</a>
+                <ul class="clear-padding list-style-type-none">
+                  <li class="clear-margin"><input type="checkbox" name="categ[0]" /> <strong>Job title 1</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[1]" /> <strong>Job title 2</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[2]" /> <strong>Job title 3</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[3]" /> <strong>Job title 4</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[4]" /> <strong>Job title 5</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[5]" /> <strong>Job title 6</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[6]" /> <strong>Job title 7</strong></li>
+                </ul>
+              </div>
+              <div class="check_category_holder">
+                <a href="#">Category 2</a>
+                <ul class="clear-padding list-style-type-none">
+                  <li class="clear-margin"><input type="checkbox" name="categ[0]" /> <strong>Job title 1</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[1]" /> <strong>Job title 2</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[2]" /> <strong>Job title 3</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[3]" /> <strong>Job title 4</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[4]" /> <strong>Job title 5</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[5]" /> <strong>Job title 6</strong></li>
+                </ul>
+              </div>
+              <div class="check_category_holder">
+                <a href="#">Category 3</a>
+                <ul class="clear-padding list-style-type-none">
+                  <li class="clear-margin"><input type="checkbox" name="categ[0]" /> <strong>Job title 1</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[1]" /> <strong>Job title 2</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[2]" /> <strong>Job title 3</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[3]" /> <strong>Job title 4</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[4]" /> <strong>Job title 5</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[5]" /> <strong>Job title 6</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[6]" /> <strong>Job title 7</strong></li>
+                </ul>
+              </div>
+              
+              <div class="check_category_holder">
+                <a href="#">Category 4</a>
+                <ul class="clear-padding list-style-type-none">
+                  <li class="clear-margin"><input type="checkbox" name="categ[0]" /> <strong>Job title 1</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[1]" /> <strong>Job title 2</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[2]" /> <strong>Job title 3</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[3]" /> <strong>Job title 4</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[4]" /> <strong>Job title 5</strong></li>
+                </ul>
+              </div>
+              <div class="check_category_holder">
+                <a href="#">Category 5</a>
+                <ul class="clear-padding list-style-type-none">
+                  <li class="clear-margin"><input type="checkbox" name="categ[0]" /> <strong>Job title 1</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[1]" /> <strong>Job title 2</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[2]" /> <strong>Job title 3</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[3]" /> <strong>Job title 4</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[4]" /> <strong>Job title 5</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[5]" /> <strong>Job title 6</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[6]" /> <strong>Job title 7</strong></li>
+                </ul>
+              </div>
+              <div class="check_category_holder">
+                <a href="#">Category 6</a>
+                <ul class="clear-padding list-style-type-none">
+                  <li class="clear-margin"><input type="checkbox" name="categ[0]" /> <strong>Job title 1</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[1]" /> <strong>Job title 2</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[2]" /> <strong>Job title 3</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[3]" /> <strong>Job title 4</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[4]" /> <strong>Job title 5</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[5]" /> <strong>Job title 6</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[6]" /> <strong>Job title 7</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[7]" /> <strong>Job title 8</strong></li>
+                </ul>
+              </div>
+              <div class="check_category_holder">
+                <a href="#">Category 6</a>
+                <ul class="clear-padding list-style-type-none">
+                  <li class="clear-margin"><input type="checkbox" name="categ[0]" /> <strong>Job title 1</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[1]" /> <strong>Job title 2</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[2]" /> <strong>Job title 3</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[3]" /> <strong>Job title 4</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[4]" /> <strong>Job title 5</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[5]" /> <strong>Job title 6</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[6]" /> <strong>Job title 7</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[7]" /> <strong>Job title 8</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[8]" /> <strong>Job title 9</strong></li>
+                  <li class="clear-margin"><input type="checkbox" name="categ[9]" /> <strong>Job title 10</strong></li>
+                </ul>
+              </div>
+            </div><!-- end of div class="category_holder clearfix" -->
+
+            <div class="category_holder clearfix">
+              <div class="form00">
+              <table cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><label for="form00-01">Other job title</label></td>
+                  <td><input type="text" id="form00-01" /></td>
+                  <td>&nbsp;&nbsp;</td>
+                  <td><a href="#">add new job title</a></td>
+                </tr>
+              </table>
+              </div>
+            </div>
+            
+            <div class="category_holder clearfix">
+            <div class="form00  clearfix form-inner">
+              <table cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><label for="form00-02">Title<span class="color-red">*</span> </label></td>
+                  <td><input type="text" id="form00-02" /></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>(this is title of your Profile that<br /> shows in search results)</td>
+                </tr>
+                <tr>
+                  <td><label for="role00-02">Primary role<span class="color-red">*</span></label> </td>
+                  <td>
+                    <select id="role00-02" title="Choose ...">
+                      <option value="Novice">Novice</option>
+                      <option value="Intermediate">Intermediate</option>
+                      <option value="Advanced">Advanced</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><a href="#">Please choose a role<br/> that best describes your skill</a></td>
+                </tr>
+                <tr>
+                  <td><label for="form00-03">I am expert in ... <span class="color-red">*</span></label> </td>
+                  <td>
+                    <textarea id="form00-03" rows="100" cols="100"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>Add two more specialism areas<span class="color-red">*</span> </label>
+                  </td>
+                  <td>
+                    1 <input type="text" id="form00-041" /> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>
+                    2 <input type="text" id="form00-042" />
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>
+                    <label>Please enter your last three academic qualifications <span class="color-red">*</span></label>
+                  </td>
+                  <td>
+                    1 <input type="text" class="mini" id="form00-051" />
+                    2 <input type="text" class="mini" id="form00-052" />
+                    3 <input type="text" class="mini" id="form00-053" />
+                  </td>
+                </tr>
+              </table>
+            </div>
+            
+            <div class="form00 clearfix form-inner">
+              <table cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <label>Please enter your last three profesional qualifications <span class="color-red">*</span></label>
+                  </td>
+                  <td>
+                    1 <input type="text" class="mini" id="form01-011" />
+                    2 <input type="text" class="mini" id="form01-012" />
+                    3 <input type="text" class="mini" id="form01-013" />
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>
+                    <label>
+                      Please enter your last three past projects/jobs to support three specialism claim <span class="color-red">*</span>(one for each)
+                    </label>
+                  </td>
+                  <td>
+                    <input type="file" id="form01-021" /><br/><br/>
+                    <input type="file" id="form01-022" /><br/><br/>
+                    <input type="file" id="form01-023" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <label for="form01-03">Job alerts <span class="color-red">*</span></label>
+                  </td>
+                  <td>
+                    <input type="checkbox" id="form01-03" /> I wish to receive frequently an e-mail with jobs that match may profile categories
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <label>Desired hourly rate <span class="color-red">*</span> (this price does not include Xpert-in commission)</label>
+                  </td>
+                  <td>
+                    Min £ <input id="form01-04" type="text" class="mini" /> Min £ <input id="form01-042" type="text" class="mini" />
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="form01-05">Availability<span class="color-red">*</span> (hrs/week)</label></td>
+                  <td><input id="form01-05" type="text" class="mini" /></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>
+                    <input type="submit" value="Complete your profile" title="Complete your profile" class="medium-button submit" onclick="location.href='/users'" />
+                    <a href="/users/additional" title="Back">Back</a></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><span class="color-red">*</span>mandatory fields</td>
+                </tr>
+              </table>
+            </div>
+            </div>
+          </div>
+         <!-- </form> -->
+        </div>
+      </div>
+    </div>
+	<div class="clear c0">&nbsp;</div>
+  </div>
+
+
+</div>

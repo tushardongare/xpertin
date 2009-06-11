@@ -608,7 +608,7 @@ border:0;
 }
 .form00 label {
 display:block;
-#width:125px;
+width:125px;
 color:#888;
 text-align:right;
 font-weight:bold;

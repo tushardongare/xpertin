@@ -1,0 +1,152 @@
+<!--<h1>New expert_company</h1>
+
+<% form_for(@expert_company) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :companyname %><br />
+    <%= f.text_field :companyname %>
+  </p>
+  <p>
+    <%= f.label :jobtitle %><br />
+    <%= f.text_field :jobtitle %>
+  </p>
+  <p>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </p>
+  <p>
+    <%= f.label :business %><br />
+    <%= f.text_field :business %>
+  </p>
+  <p>
+    <%= f.label :noemplyees %><br />
+    <%= f.text_field :noemplyees %>
+  </p>
+  <p>
+    <%= f.label :hearaboutus %><br />
+    <%= f.text_field :hearaboutus %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', expert_companies_path %>-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+	/*custom selects*/
+	$('#country001-05, #bussines001-05, #employees001-05, #howhear-05').SelectCustomizer();
+});
+</script>
+<div id="tabs">
+    <div id="nav">
+    <ul class="clearfix">
+      <li class="selected"><a href="/">Overview</a></li>
+	  <li><a href="#">Why to use Xpert-in?</a></li>
+	  <li><a href="/providers">Providers</a></li>
+      <li><a href="/jobs">Jobs</a></li>
+	</ul>
+  </div>
+
+  <div class="main-content">
+    <div id="trail">
+      <a href="/">Home</a> &#187; <a href="/users/new">Create an account</a> &#187; <a href="/users/steps">Next steps</a> &#187; Describe your company
+	</div>
+
+    <div class="inner-panel_lg_holder">
+      <h2>Describe your company</h2>
+      <div class="inner-panel_lg">
+        <div id="tabx" class="clearfix">
+          <div class="form00 fix-ie-preface">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio.
+            Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat.
+            Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Donec vulputate faucibus risus ut sollicitudin.</p>
+          </div>
+          <div class="just-panel">
+            <!-- <form method="post"> -->
+            <% form_for(@expert_company) do |f| %>
+			<div class="form00 clearfix">
+              <table cellpadding="0" cellspacing="0" class="x-width">
+                <tr>
+                  <td><label for="form00-01">Company name<span class="color-red">*</span> </label></td>
+                  <td><%= f.text_field :companyname %></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>(if you don't have one, use your name)</td>
+                </tr>
+                <tr>
+                  <td><label for="form00-02">Job title<span class="color-red">*</span> </label></td>
+                  <td><%= f.text_field :jobtitle %></td>
+                </tr>
+                <tr>
+                  <td><label for="country001-05">Country<span class="color-red">*</span> </label></td>
+                  <td>
+                    <select name="expert_company[country]" id="country001-05" title="Choose a country">
+                      <option value="Albania">Albania</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="United States of America">United States of America</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="United States of America">United States of America</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="United States of America">United States of America</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    </td>
+                  </tr>
+                  <tr>
+                  <td><label for="bussines001-05">Which of the following best describes your bussines </label></td>
+                  <td>
+                    <select name="expert_company[business]" id="bussines001-05" title="Choose a bussines">
+                      <option value="Website Design / Website Marketing">Website Design / Website Marketing</option>
+                      <option value="Graphic Design / Presentations / Multimedia">Graphic Design / Presentations / Multimedia</option>
+                      <option value="Illustration / Cartooning / Painting / Sculpting">Illustration / Cartooning / Painting / Sculpting</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    </td>
+                  </tr>
+                  <tr>
+                  <td><label for="employees001-05">How many employees does your organisation have</label></td>
+                  <td>
+                    <select name="expert_company[noemplyees]" id="employees001-05" title="Choose ..">
+                      <option value="1 - 10">1 - 10</option>
+                      <option value="11-30">11-30</option>
+                      <option value="31-60">31-60</option>
+                    </select>
+                    </td>
+                  </tr>
+                  <tr>
+                  <td><label for="howhear001-05">How did you hear about us</label></td>
+                  <td>
+                    <select name="expert_company[hearaboutus]" id="howhear-05" title="Choose ..">
+                      <option value="Internet">Internet</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><%= f.submit 'Next Step', :style=>"float:right",:class=>"medium-button submit" %><input type="button"  value="Previous" title="Save and continue" class="medium-button submit" onclick="location.href='/expert_personals'"/></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="color-red">*</span> mandatory fields</td>
+                  </tr>
+              </table>
+
+            </div>
+			<% end %>
+
+            <!-- </form> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<div class="clear c0">&nbsp;</div>
+   </div>
+</div>

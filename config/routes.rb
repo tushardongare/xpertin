@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :expert_professionals
+
+  map.resources :expert_companies
+
+  map.resources :expert_personals
+
   map.resources :expert_locations
 
   map.resources :provider_locations

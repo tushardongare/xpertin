@@ -265,7 +265,7 @@ a, input.submit{
     display:none;
 }
 select {
-    display:none;
+    #display:none;
 }
 .form-inner-home{
     width:420px;

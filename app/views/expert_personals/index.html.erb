@@ -1,0 +1,46 @@
+<h1>Listing expert_personals</h1>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Picture</th>
+    <th>Security</th>
+    <th>Answer</th>
+    <th>Addressline1</th>
+    <th>Addressline2</th>
+    <th>Postalcode</th>
+    <th>City</th>
+    <th>Country</th>
+    <th>Timezone</th>
+    <th>Phonecountrycode</th>
+    <th>Phoneareacode</th>
+    <th>Phonenumber</th>
+  </tr>
+
+<% @expert_personals.each do |expert_personal| %>
+  <tr>
+    <td><%=h expert_personal.firstname %></td>
+    <td><%=h expert_personal.lastname %></td>
+    <td><%=h expert_personal.picture %></td>
+    <td><%=h expert_personal.security %></td>
+    <td><%=h expert_personal.answer %></td>
+    <td><%=h expert_personal.addressline1 %></td>
+    <td><%=h expert_personal.addressline2 %></td>
+    <td><%=h expert_personal.postalcode %></td>
+    <td><%=h expert_personal.city %></td>
+    <td><%=h expert_personal.country %></td>
+    <td><%=h expert_personal.timezone %></td>
+    <td><%=h expert_personal.phonecountrycode %></td>
+    <td><%=h expert_personal.phoneareacode %></td>
+    <td><%=h expert_personal.phonenumber %></td>
+    <td><%= link_to 'Show', expert_personal %></td>
+    <td><%= link_to 'Edit', edit_expert_personal_path(expert_personal) %></td>
+    <td><%= link_to 'Destroy', expert_personal, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New expert_personal', new_expert_personal_path %>

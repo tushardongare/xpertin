@@ -1,0 +1,33 @@
+<p>
+  <b>Companyname:</b>
+  <%=h @expert_company.companyname %>
+</p>
+
+<p>
+  <b>Jobtitle:</b>
+  <%=h @expert_company.jobtitle %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @expert_company.country %>
+</p>
+
+<p>
+  <b>Business:</b>
+  <%=h @expert_company.business %>
+</p>
+
+<p>
+  <b>Noemplyees:</b>
+  <%=h @expert_company.noemplyees %>
+</p>
+
+<p>
+  <b>Hearaboutus:</b>
+  <%=h @expert_company.hearaboutus %>
+</p>
+
+
+<%= link_to 'Edit', edit_expert_company_path(@expert_company) %> |
+<%= link_to 'Back', expert_companies_path %>

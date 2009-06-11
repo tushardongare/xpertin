@@ -1,0 +1,84 @@
+<h1>Editing expert_professional</h1>
+
+<% form_for(@expert_professional) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :primaryrole %><br />
+    <%= f.text_field :primaryrole %>
+  </p>
+  <p>
+    <%= f.label :expertin %><br />
+    <%= f.text_area :expertin %>
+  </p>
+  <p>
+    <%= f.label :special1 %><br />
+    <%= f.text_field :special1 %>
+  </p>
+  <p>
+    <%= f.label :special2 %><br />
+    <%= f.text_field :special2 %>
+  </p>
+  <p>
+    <%= f.label :academic1 %><br />
+    <%= f.text_field :academic1 %>
+  </p>
+  <p>
+    <%= f.label :academic2 %><br />
+    <%= f.text_field :academic2 %>
+  </p>
+  <p>
+    <%= f.label :academic3 %><br />
+    <%= f.text_field :academic3 %>
+  </p>
+  <p>
+    <%= f.label :qualification1 %><br />
+    <%= f.text_field :qualification1 %>
+  </p>
+  <p>
+    <%= f.label :qualification2 %><br />
+    <%= f.text_field :qualification2 %>
+  </p>
+  <p>
+    <%= f.label :qualification3 %><br />
+    <%= f.text_field :qualification3 %>
+  </p>
+  <p>
+    <%= f.label :pastjob1 %><br />
+    <%= f.text_field :pastjob1 %>
+  </p>
+  <p>
+    <%= f.label :pastjob2 %><br />
+    <%= f.text_field :pastjob2 %>
+  </p>
+  <p>
+    <%= f.label :pastjob3 %><br />
+    <%= f.text_field :pastjob3 %>
+  </p>
+  <p>
+    <%= f.label :jobalert %><br />
+    <%= f.text_field :jobalert %>
+  </p>
+  <p>
+    <%= f.label :minrate %><br />
+    <%= f.text_field :minrate %>
+  </p>
+  <p>
+    <%= f.label :maxrate %><br />
+    <%= f.text_field :maxrate %>
+  </p>
+  <p>
+    <%= f.label :hrsperweek %><br />
+    <%= f.text_field :hrsperweek %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @expert_professional %> |
+<%= link_to 'Back', expert_professionals_path %>

@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  primaryrole: MyString
+  expertin: MyText
+  special1: MyString
+  special2: MyString
+  academic1: MyString
+  academic2: MyString
+  academic3: MyString
+  qualification1: MyString
+  qualification2: MyString
+  qualification3: MyString
+  pastjob1: 
+  pastjob2: 
+  pastjob3: 
+  jobalert: MyString
+  minrate: 1
+  maxrate: 1
+  hrsperweek: 1
+
+two:
+  title: MyString
+  primaryrole: MyString
+  expertin: MyText
+  special1: MyString
+  special2: MyString
+  academic1: MyString
+  academic2: MyString
+  academic3: MyString
+  qualification1: MyString
+  qualification2: MyString
+  qualification3: MyString
+  pastjob1: 
+  pastjob2: 
+  pastjob3: 
+  jobalert: MyString
+  minrate: 1
+  maxrate: 1
+  hrsperweek: 1

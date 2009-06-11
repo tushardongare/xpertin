@@ -10,10 +10,10 @@ $(document).ready(function(){
 		});
 	});
 	
-	/*custom selects*/
+	/*custom selects
 	$(function() {
 		$('#form03-03, #form03-05, #form05-01a, #form05-04, #form05-06a, #form05-06b, #form05-07a, #form05-07b, #form06-02, #form06-04a, #form06-04b, #form06-05a, #form06-05b, #update00-01, #update00-02, #update01-01, #update01-02').SelectCustomizer();
-	});
+	});*/
 	
 	$('#taby_h1, #taby_h2, #taby_h3, #taby_h4').hide();
 	$('.email-pane').hide();

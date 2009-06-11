@@ -1,0 +1,172 @@
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	/*custom selects*/
+	$('#question00-01,#city001-05, #country001-05, #time001-05').SelectCustomizer();
+});
+</script>
+<div id="tabs">
+  <div id="nav">
+    <ul class="clearfix">
+      <li class="selected"><a href="/">Overview</a></li>
+	  <li><a href="#">Why to use Xpert-in?</a></li>
+	  <li><a href="/providers">Providers</a></li>
+      <li><a href="/jobs">Jobs</a></li>
+	</ul>
+  </div>
+  
+  <div class="main-content">
+    <div id="trail">
+      <a href="/">Home</a> &#187; <a href="/users/new">Create an account</a> &#187; <a href="/users/steps">Next steps</a> &#187; Profile information
+	</div>
+
+    <div class="inner-panel_lg_holder">
+      <h2>Profile information</h2>
+        <div class="inner-panel_lg">
+          <div id="tabx" class="clearfix">
+            <div class="form00 fix-ie-preface">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eros dui, ornare id molestie vel, placerat id odio.
+              Nam non lorem id mauris rutrum euismod vel at est. Ut at imperdiet eros. Suspendisse iaculis faucibus volutpat.
+              Sed ac consectetur lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+              Donec vulputate faucibus risus ut sollicitudin.</p>
+            </div>
+		  <%= error_messages_for :expert_personal %>	
+          <!-- <form method="post"> -->
+		  <% form_for(@expert_personal, :html => { :multipart => true }) do |f| %>
+            <div class="just-panel ">
+                <div class="form00 clearfix">
+                  <h4>Account information</h4>
+                  <table cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><label for="form00-01">First name<span class="color-red">*</span> </label></td>
+                      <td><%= f.text_field :firstname %></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form00-02">Last name<span class="color-red">*</span> </label></td>
+                      <td><%= f.text_field :lastname %></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form00-03">User name<span class="color-red">*</span> </label></td>
+                      <td><input disabled value="<%= self.current_user.login %>" type="text" id="form00-03"/></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form00-04">E-mail<span class="color-red">*</span> </label></td>
+                      <td><input disabled value="<%= self.current_user.email %>" type="text" id="form00-04"/></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form00-05">Profile Picture</label></td>
+                      <td>
+					  <%= file_column_field  'expert_personal', 'picture'  %><br />
+					  
+					  </td>
+                    </tr>
+                    <tr>
+                      <td><label for="question00-01">Security question<span class="color-red">*</span> </label></td>
+                      <td>
+                        <select name="expert_personal[security]" id="question00-01" title="Security question">
+                          <option value="What is your primary frequent flyer number">What is your primary frequent flyer number</option>
+                          <option value="What is your library card number">What is your library card number</option>
+                          <option value="What was your first phone number">What was your first phone number</option>
+                          <option value="What was your first teacher's name">What was your first teacher's name</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="form00-07">Answer<span class="color-red">*</span> </label></td>
+                      <td><%= f.text_field :answer %></td>
+                    </tr>
+                  </table>
+                </div>
+
+            </div>
+
+            <div class="just-panel hang">
+                <div class="form00 clearfix">
+                  <h4>Location information</h4>
+                  <table cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><label for="form001-01">Address line 1<span class="color-red">*</span> </label></td>
+                      <td><%= f.text_field :addressline1 %></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form001-02">Address line 2</label></td>
+                      <td><%= f.text_field :addressline2 %></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form001-03">Postal code<span class="color-red">*</span> </label></td>
+                      <td><%= f.text_field :postalcode %></td>
+                    </tr>
+                    <tr>
+                      <td><label for="city001-05">City<span class="color-red">*</span> </label></td>
+                      <td>
+                        <select name="expert_personal[city]" id="city001-05" title="Choose a city">
+                          <option value="Alaska">Alaska</option>
+                          <option value="Arizona">Arizona</option>
+                          <option value="Arkansas">Arkansas</option>
+                          <option value="California">California</option>
+                          <option value="Colorado">Colorado</option>
+                          <option value="Other">Other</option>
+                       </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="country001-05">Country<span class="color-red">*</span> </label></td>
+                      <td>
+                        <select name="expert_personal[country]" id="country001-05" title="Choose a country">
+                          <option value="Albania">Albania</option>
+                          <option value="United Kingdom">United Kingdom</option>
+                          <option value="United States of America">United States of America</option>
+                          <option value="United Kingdom">United Kingdom</option>
+                          <option value="United States of America">United States of America</option>
+                          <option value="United Kingdom">United Kingdom</option>
+                          <option value="United States of America">United States of America</option>
+                          <option value="Other">Other</option>
+                       </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="time001-05">Timezone<span class="color-red">*</span> </label></td>
+                      <td>
+                        <select name="expert_personal[timezone]" id="time001-05" title="Choose a timezone">
+                         <option value="GMT + 00:00">GMT + 00:00</option>
+                         <option value="GMT + 01:00">GMT + 01:00</option>
+                         <option value="GMT + 02:00">GMT + 02:00</option>
+                         <option value="Other">Other</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="form001-06">Phone<span class="color-red">*</span> </label></td>
+                      <td>+<%= f.text_field :phonecountrycode , :class=>"x-mini" %> (<%= f.text_field :phoneareacode,  :class=>"x-mini" %>) <%= f.text_field :phonenumber, :class=>"medium" %></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>+ Country code (Area code)</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>(Your phone is required in case there are questions about your account)</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><span class="color-red">*</span> mandatory fields</td>
+                    </tr>
+					<tr>
+                      <td>&nbsp;</td>
+                      <td><%= f.submit 'Next Step',:style=>"float:right" ,:class=>"medium-button submit" %></td>
+                    </tr>
+
+                  </table>
+                </div>
+            </div>
+			<% end %>
+           <!-- </form> -->
+            
+          </div><!-- end of main -->
+        </div>
+    </div>
+	<div class="clear c0">&nbsp;</div>
+  </div>
+  
+</div>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  companyname: MyString
+  jobtitle: MyString
+  country: MyString
+  business: MyString
+  noemplyees: MyString
+  hearaboutus: MyString
+
+two:
+  companyname: MyString
+  jobtitle: MyString
+  country: MyString
+  business: MyString
+  noemplyees: MyString
+  hearaboutus: MyString

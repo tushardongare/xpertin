@@ -14,10 +14,7 @@
           Donec vulputate faucibus risus ut sollicitudin.</p>
 		 </div>
          <%= error_messages_for :expert_location %>	
-		  <!--<h4>
-             <input type="radio" id="form00-001" name="role" value="expert"/> I want create to a provider's account &nbsp;&nbsp;
-             <input type="radio" id="form00-002" name="role" value="client"/> I want create to a client's account
-          </h4>-->
+		  
          <div class="just-panel add_width_for_single_panel">
          <!-- <form method="post"> -->
 		  <% form_for(@expert_location) do |f| %>
@@ -69,7 +66,133 @@
           </div>
           <% end -%>
         </div>
+		<!--END-->
+          <!-- <form method="post"> -->
+		  <% form_for(@expert_location) do |f| %>
+            <div class="just-panel ">
+                <div class="form00 clearfix">
+                  <h4>Account information</h4>
+                  <table cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><label for="form00-01">First name<span class="color-red">*</span> </label></td>
+                      <td><input type="text" id="form00-01"/></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form00-02">Last name<span class="color-red">*</span> </label></td>
+                      <td><input type="text" id="form00-02"/></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form00-03">User name<span class="color-red">*</span> </label></td>
+                      <td><input type="text" id="form00-03"/></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form00-04">E-mail<span class="color-red">*</span> </label></td>
+                      <td><input type="text" id="form00-04"/></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form00-05">Profile Picture</label></td>
+                      <td><input type="file" id="form00-05" title="Upload file"/></td>
+                    </tr>
+                    <tr>
+                      <td><label for="question00-01">Security question<span class="color-red">*</span> </label></td>
+                      <td>
+                        <select id="question00-01" title="Security question">
+                          <option value="What is your primary frequent flyer number">What is your primary frequent flyer number</option>
+                          <option value="What is your library card number">What is your library card number</option>
+                          <option value="What was your first phone number">What was your first phone number</option>
+                          <option value="What was your first teacher's name">What was your first teacher's name</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="form00-07">Answer<span class="color-red">*</span> </label></td>
+                      <td><input type="text" id="form00-07"/></td>
+                    </tr>
+                  </table>
+                </div>
 
+            </div>
+
+            <div class="just-panel hang">
+                <div class="form00 clearfix">
+                  <h4>Location information</h4>
+                  <table cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><label for="form001-01">Address line 1<span class="color-red">*</span> </label></td>
+                      <td><input name="expert_location[addressline1]" type="text" id="form001-01"/></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form001-02">Address line 2</label></td>
+                      <td><input name="expert_location[addressline12" type="text" id="form001-02"/></td>
+                    </tr>
+                    <tr>
+                      <td><label for="form001-03">Postal code<span class="color-red">*</span> </label></td>
+                      <td><input name="expert_location[postalcode]" type="text" id="form001-03" class="mini"/></td>
+                    </tr>
+                    <tr>
+                      <td><label for="city001-05">City<span class="color-red">*</span> </label></td>
+                      <td>
+                        <select name="expert_location[city]" id="city001-05" title="Choose a city">
+                          <option value="Alaska">Alaska</option>
+                          <option value="Arizona">Arizona</option>
+                          <option value="Arkansas">Arkansas</option>
+                          <option value="California">California</option>
+                          <option value="Colorado">Colorado</option>
+                          <option value="Other">Other</option>
+                       </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="country001-05">Country<span class="color-red">*</span> </label></td>
+                      <td>
+                        <select  name="expert_location[country]" title="Choose a country">
+                          <option value="Albania">Albania</option>
+                          <option value="United Kingdom">United Kingdom</option>
+                          <option value="United States of America">United States of America</option>
+                          <option value="United Kingdom">United Kingdom</option>
+                          <option value="United States of America">United States of America</option>
+                          <option value="United Kingdom">United Kingdom</option>
+                          <option value="United States of America">United States of America</option>
+                          <option value="Other">Other</option>
+                       </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="time001-05">Timezone<span class="color-red">*</span> </label></td>
+                      <td>
+                        <select id="time001-05" title="Choose a timezone">
+                         <option value="GMT + 00:00">GMT + 00:00</option>
+                         <option value="GMT + 01:00">GMT + 01:00</option>
+                         <option value="GMT + 02:00">GMT + 02:00</option>
+                         <option value="Other">Other</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="form001-06">Phone<span class="color-red">*</span> </label></td>
+                      <td>+<input type="text" id="form001-06" class="x-mini"/> (<input type="text" id="form001-061" class="x-mini"/>) <input type="text" id="form001-062" class="medium"/></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>+ Country code (Area code)</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>(Your phone is required in case there are questions about your account)</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><input type="submit" value="Save and continue" title="Save and continue" class="medium-button submit" onclick="location.href='/users/steps'" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><span class="color-red">*</span> mandatory fields</td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+			<% end -%>
+           <!-- </form> -->
       </div>
     </div>
    </div>
